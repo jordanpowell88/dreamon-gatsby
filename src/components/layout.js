@@ -10,7 +10,8 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql, withPrefix } from "gatsby"
 
-import Header from "./header"
+import Header from "./header/header";
+import Footer from './footer';
 import "./layout.css"
 
 
@@ -43,11 +44,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
       </div>
     </>
   )
