@@ -420,5 +420,4 @@
             return false;
         });
     });
-
-}(jQuery));
+});
