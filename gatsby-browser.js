@@ -5,3 +5,8 @@
  */
 
 // You can delete this file if you're not using it
+
+import './src/css/global.css';
+import './src/css/normalize.css';
+import './src/css/plugin.css';
+import './src/css/responsive.css';
