@@ -54,7 +54,7 @@ const Header = () => (
                                         <li><a className="nav-link" href="events">events</a></li>
                                         <li><a className="nav-link" href="https://shop.dreamon.world">store</a></li>
                                         <li><a className="nav-link" href="contact">contact</a></li>
-                                        <li><a className="nav-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCJ6SAWVF5U5Q">donate</a></li>
+                                        {/* <li><a className="nav-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCJ6SAWVF5U5Q">donate</a></li> */}
                                     </ul>
                                 </div>
                             </div>

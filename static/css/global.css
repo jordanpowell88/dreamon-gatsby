@@ -489,6 +489,11 @@ ul.breadcrumb li a {
     width: 100%;
 }
 
+div.menu-part>nav.navbar.navbar-default {
+    background: none !important;
+    border: none !important;
+}
+
 /***** ----- menu part ----- *****/
 
 nav {
