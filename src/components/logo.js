@@ -27,7 +27,15 @@ const Logo = () => {
     }
   `)
 
-  return <Img fluid={data.logoImage.childImageSharp.fluid} />
+  return (
+  <div className="col-sm-3 col-xs-6">
+    <div className="logo">
+        <a className="nav-link" href="/">
+          <Img fluid={data.logoImage.childImageSharp.fluid} />
+        </a>
+    </div>
+  </div>
+  )
 }
 
 export default Logo
