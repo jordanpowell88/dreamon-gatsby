@@ -32,7 +32,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `team-members`,
-        path: `${__dirname}/src/pages/team-members`,
+        path: `${__dirname}/src/markdown-pages/team-members`,
       },
     },
     `gatsby-transformer-remark`,
