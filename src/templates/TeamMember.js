@@ -28,18 +28,16 @@ export default function TeamMember({
     )
 }
 export const teamQuery = graphql`
-    query($path: String!) {
-        markdownRemark(frontmatter: { path: { eq: $path }} ) {
-            html
-            frontmatter {
-                order
-                name
-                title
-                photo
-                facebook
-                twitter
-                instagram
-            }
-        }
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      frontmatter {
+          name,
+          title
+          facebook,
+          twitter,
+          instagram
+      }
     }
+  }
 `

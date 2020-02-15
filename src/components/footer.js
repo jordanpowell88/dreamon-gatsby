@@ -1,12 +1,23 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'gatsby';
 
-const Footer = () => (
+const Footer = () => {
+    const date = new Date().getFullYear()
+    return (
     <>
-    <footer>
-        {/* © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a> */}
+    <footer className="footer-area parallax">
+        <div className="main-footer-area">
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-12 text-center">
+                        <div className="copy-right">
+                            <p>Copyright &copy; {date} <Link to="/">| Dream On: Global |</Link> all rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
      <Helmet>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
@@ -23,5 +34,6 @@ const Footer = () => (
         <script src={'../../js/main.js'}></script>
     </Helmet>
     </>
-)
+    )
+}
 export default Footer;

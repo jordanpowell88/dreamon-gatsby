@@ -454,7 +454,7 @@ input:focus {
 }
 
 .breadcrumb {
-    background-color: transparent;
+    background-color: transparent !important;
     padding: 0;
     margin: 0;
 }

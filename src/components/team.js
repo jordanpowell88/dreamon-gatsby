@@ -1,54 +1,23 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 
-const Team = ({
-    data: {
-        allMarkdownRemark: { edges }
-    }
-}) => {
-    const TeamMembers = edges
-        .filter(edge => !!edge.node.frontmatter.order)
-        .map(edge =>
-            <div className="col-md-3 col-sm-6">
-                <div className="single-volunteers">
-                    <div className="volunteers-info">
-                        {/* <img src={member.node.facebook} alt="Ben Swartz - Dream On: Global" /> */}
-                        <div className="single-team-con">
-                            <div className="single-team-txt">
-                                <ul>
-                                    <li><a href={edge.node.frontmatter.facebook} target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href={edge.node.frontmatter.twitter} target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter" aria-hidden="true"></i></a></li>                                        
-                                    <li><a href={edge.node.frontmatter.instagram} target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <h3>{edge.node.frontmatter.name}</h3>
-                    <span>{edge.node.frontmatter.title}</span>
-                </div>
+const Team =({TeamMembers}) => {
+  return (
+    <section className="volunteers-area section-padding" id="volunteers">
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-8 col-sm-offset-2">
+            <div className="title text-center">
+              <h2>The dream team</h2>
+              <div className="separate"><span className="separate-icon"></span></div>
             </div>
-        )
-    return (
-        {TeamMembers}
-    )
+          </div>
+        </div>
+        <div className="row">
+          {TeamMembers}
+        </div>
+      </div>
+    </section>
+  )
 }
-export default Team;
 
-export const teamQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___order] }) {
-      edges {
-        node {
-          frontmatter {
-            order
-            name
-            title
-            facebook
-            twitter
-            instagram
-          }
-        }
-      }
-    }
-  }
-`
+export default Team;

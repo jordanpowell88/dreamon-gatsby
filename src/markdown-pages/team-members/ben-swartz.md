@@ -3,8 +3,8 @@ path: "/team/ben-swartz"
 order: 1
 name: "Ben Swartz"
 title: "President"
-photo: "ben.jpg"
-facebook: "benjamin.swartz.7"
-twitter: "SwartzyBen"
-instagram: "swartzyben"
+photo: "/images/volunteers/ben.jpg"
+facebook: "https://facebook.com/benjamin.swartz.7"
+twitter: "https://twitter.com/SwartzyBen"
+instagram: "https://instagram.com/swartzyben"
 ---
