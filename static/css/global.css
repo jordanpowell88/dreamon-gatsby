@@ -83,7 +83,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Pathway Gothic One', sans-serif;
+    font-family: 'Pathway Gothic One', sans-serif !important;
     text-transform: uppercase;
     margin: 0;
     line-height: 1;
@@ -1884,6 +1884,14 @@ textarea.form-control {
 
 .news-info:hover .news-content {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-info>a>h2 {
+    color:#555 !important;
+}
+
+.news-info>a:hover {
+    text-decoration: none;
 }
 
 .news-img:before {
