@@ -5,16 +5,16 @@ const Breadcrumbs = ({
   title,
   breadcrumbs
 }) => {
-  const BreadCrumbs = breadcrumbs
+  const BreadCrumbs = breadcrumbs ? breadcrumbs
     .map((breadcrumb, i) =>
       <li key={i}>
         <Link to={breadcrumb.link}>{breadcrumb.name}</Link>
       </li>
-    )
+    ) : null;
     return (
       <ul className="breadcrumb">
         <li><a href="/">Home</a></li>
-        {BreadCrumbs}
+        {BreadCrumbs ? Breadcrumbs : null}
         <li className="active">{title}</li>
       </ul>
     )
