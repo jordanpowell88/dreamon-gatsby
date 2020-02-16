@@ -17,7 +17,7 @@ const IndexPage = ({
   }
 }) => {
     const TeamMembers = edges
-      .filter(edge => !!edge.node.frontmatter.order)
+      .filter(edge => !!edge.node.frontmatter.order && edge.node.frontmatter.title !== 'Music Collective Artist')
       .map(edge =>
         <TeamPreview key={edge.node.id} data={edge.node.frontmatter} />
       )

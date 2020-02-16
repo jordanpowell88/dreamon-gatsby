@@ -12,8 +12,26 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const teamMemberTemplate = path.resolve(`src/templates/TeamMember.js`)
+  const musicianTemplate = path.resolve(`src/templates/MusicMember.js`)
 
-  const result = await graphql(`
+  const teamMemberResult = await graphql(`
+    {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___order] }
+        limit: 100
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const musicianResult = await graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___order] }
@@ -31,16 +49,24 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   `)
 
   // Handle errors
-  if (result.errors) {
+  if (teamMemberResult.errors || musicianResult.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  teamMemberResult.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
       component: teamMemberTemplate,
       context: {}, // additional data can be passed via context
+    })
+  })
+
+  musicianResult.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: musicianTemplate,
+      context: {}
     })
   })
 }

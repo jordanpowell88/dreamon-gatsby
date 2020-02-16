@@ -35,6 +35,13 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages/team-members`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `music-members`,
+        path: `${__dirname}/src/markdown-pages/musicians`,
+      },
+    },
     `gatsby-transformer-remark`,
   ],
     // this (optional) plugin enables Progressive Web App + Offline functionality
