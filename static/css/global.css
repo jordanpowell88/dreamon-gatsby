@@ -1163,6 +1163,7 @@ nav {
     background: url('../images/about/donate-bg.jpg') no-repeat scroll center top / cover;
     position: relative;
     padding: 50px 0;
+    z-index: 0;
 }
 
 .video-area::before {
