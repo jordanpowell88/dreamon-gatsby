@@ -13,6 +13,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const musicianTemplate = path.resolve(`src/templates/MusicMember.js`)
   const speakerTemplate = path.resolve(`src/templates/SpeakerMember.js`)
+  const eventTemplate = path.resolve(`src/templates/Event.js`)
 
   const markdownResults = await graphql(`
     {
@@ -35,6 +36,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               date
               author
               buy
+              videos
+              category
             }
           }
         }
@@ -49,7 +52,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   markdownResults.data.allMarkdownRemark.edges
-    .filter(edge => edge.node.frontmatter.title === 'Music Collective Artist')
+    .filter(edge => edge.node.frontmatter.category === 'Musician')
     .forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
@@ -59,11 +62,21 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
 
   markdownResults.data.allMarkdownRemark.edges
-    .filter(edge => edge.node.frontmatter.title === 'Speaker Collective Speaker')
+    .filter(edge => edge.node.frontmatter.category === 'Speaker')
     .forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: speakerTemplate,
+        context: {}
+      })
+    })
+
+  markdownResults.data.allMarkdownRemark.edges
+    .filter(edge => edge.node.frontmatter.category === 'Events')
+    .forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: eventTemplate,
         context: {}
       })
     })

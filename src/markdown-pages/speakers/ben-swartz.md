@@ -7,6 +7,7 @@ photo: "/images/volunteers/ben-swartz.jpg"
 videos: []
 facebook: "https://www.facebook.com/benjamin.swartz.7"
 instagram: "https://www.instagram.com/swartzyben/"
+category: "Speaker"
 ---
 
 # About Ben Swartz

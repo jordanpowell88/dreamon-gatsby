@@ -6,6 +6,7 @@ title: "Music Collective Artist"
 photo: "/images/volunteers/lilli-gray.jpg"
 facebook: "https://www.facebook.com/lilli.r.bucher"
 instagram: "https://www.instagram.com/lillirosegray/"
+category: "Musician"
 ---
 
 # About Lilli Gray

@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from "../components/layout"
 import SEO from "../components/seo";
-import TeamPreview from '../components/team-preview';
+import TeamPreview from '../components/team/team-preview';
 import { graphql } from "gatsby";
 
 const Team = ({

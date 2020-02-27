@@ -6,6 +6,7 @@ title: "Music Collective Artist"
 photo: "/images/volunteers/lucas-gray.jpg"
 facebook: "https://www.facebook.com/lucas.gray.37"
 instagram: "https://www.instagram.com/lucasgray95/"
+category: "Musician"
 ---
 
 # About Lucas Gray

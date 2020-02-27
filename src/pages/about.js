@@ -3,16 +3,8 @@ import About from '../components/about';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PageHeader from '../components/page-header';
-import TeamPreview from '../components/team-preview';
-import Team from '../components/team';
-
-export function teamMembersFilter(edges) {
-  return edges.filter(edge =>
-      edge.node.frontmatter.category !== 'Books' &&
-      edge.node.frontmatter.title !== 'Music Collective Artist' &&
-      edge.node.frontmatter.title !== 'Speaker Collective Speaker'
-    );
-}
+import TeamPreview from '../components/team/team-preview';
+import Team from '../components/team/team';
 
 const AboutPage = ({
   data: {
@@ -20,7 +12,8 @@ const AboutPage = ({
   }
 }) => {
   const title = "About Dream On"
-  const TeamMembers = teamMembersFilter(edges)
+  const TeamMembers = edges
+    .filter(edge => edge.node.frontmatter.category === 'Team')
     .map(edge =>
       <TeamPreview key={edge.node.id} data={edge.node.frontmatter} /> 
     )

@@ -10,9 +10,9 @@ const SpeakersPage = ({
     allMarkdownRemark: { edges }
   }
 }) => {
-  const title = "Dream On: Speaker Collective"
+  const title = "Speaker Collective"
   const SpeakerMembers = edges
-    .filter(edge => !!edge.node.frontmatter.order && edge.node.frontmatter.title === 'Speaker Collective Speaker')
+    .filter(edge => edge.node.frontmatter.category === 'Speaker')
     .map(edge => 
       <SpeakerPreview key={edge.node.id} data={edge.node.frontmatter} /> 
     )
@@ -33,7 +33,7 @@ const SpeakersPage = ({
                 </div>
             </div>
         </div>
-    </div>
+      </div>
     </Layout>
   )
 }
@@ -50,6 +50,7 @@ export const pageQuery = graphql`
             title
             photo
             path
+            category
           }
         }
       }

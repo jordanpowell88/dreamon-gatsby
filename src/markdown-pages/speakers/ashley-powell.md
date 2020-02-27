@@ -7,6 +7,7 @@ photo: "/images/volunteers/ashley-powell.jpg"
 videos: []
 facebook: "https://www.facebook.com/ashley.l.powell.5"
 instagram: "https://www.instagram.com/ashleyleepowell/"
+category: "Speaker"
 ---
 
 # About Ashley Powell

@@ -10,6 +10,7 @@ instagram: "https://www.instagram.com/zacandemilyhowardworship/"
 youtube: "https://www.youtube.com/channel/UCxQK3GD5Qp75pyeTs55E2Gw"
 vimeo: "https://vimeo.com/zacandemilyhoward"
 spotify: "https://open.spotify.com/artist/4JfkhskN6Qelmki1ZLyQWc?si=RdpBSqBcQqiKZ2mECtGPsw"
+category: "Musician"
 ---
 
 # About Emily Howard

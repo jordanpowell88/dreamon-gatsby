@@ -56,6 +56,13 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages/books`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `events`,
+        path: `${__dirname}/src/markdown-pages/events`,
+      },
+    },
     `gatsby-transformer-remark`,
   ],
     // this (optional) plugin enables Progressive Web App + Offline functionality

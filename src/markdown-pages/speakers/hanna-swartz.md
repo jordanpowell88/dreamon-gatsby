@@ -6,6 +6,7 @@ title: "Speaker Collective Speaker"
 photo: "/images/volunteers/hanna-swartz.jpg"
 videos: []
 facebook: "https://www.facebook.com/hanna.hager.37"
+category: "Speaker"
 ---
 
 # About Hanna Swartz

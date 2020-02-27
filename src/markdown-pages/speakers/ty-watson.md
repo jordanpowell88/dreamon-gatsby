@@ -6,6 +6,7 @@ title: "Speaker Collective Speaker"
 photo: "/images/volunteers/tyler-watson.jpg"
 videos: []
 facebook: "https://www.facebook.com/ty.watson.925"
+category: "Speaker"
 ---
 
 # About Ty Watson

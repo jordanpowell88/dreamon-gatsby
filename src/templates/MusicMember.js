@@ -4,8 +4,8 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import MusicHeader from '../components/music-collective/music-header';
 import MusicCollectiveStore from '../components/music-collective/music-collective-store';
-import MusicCollectiveEvents from '../components/music-collective/music-collective-events';
 import MusicCollectiveVideos from '../components/music-collective/music-collective-videos';
+import MusicCollectiveEvents from '../components/music-collective/music-collective-events';
 import { Link } from 'gatsby';
 
 const MusicMember = ({
@@ -20,6 +20,8 @@ const MusicMember = ({
     vimeo: frontmatter.vimeo,
     spotify: frontmatter.spotify
   }
+  const events = data.allMarkdownRemark.nodes
+    .filter(event => new Date(event.frontmatter.date) >= new Date())
   return (
     <Layout>
       <SEO title={frontmatter.name} />
@@ -29,9 +31,8 @@ const MusicMember = ({
           <div className="row">
             <div className="col-md-12" dangerouslySetInnerHTML={{ __html: html }}></div>
             <div className="col-md-12">
-              <Link to="/book" class="tem-btn nav-link move-eff"><span>book</span></Link>
-
-              <MusicCollectiveEvents />
+              <Link to="/book" className="tem-btn nav-link move-eff"><span>book</span></Link>
+              <MusicCollectiveEvents events={events} />
               <MusicCollectiveVideos videos={frontmatter.videos} />
               <MusicCollectiveStore />
             </div>
@@ -44,6 +45,18 @@ const MusicMember = ({
 export default MusicMember;
 export const musicMemberQuery = graphql`
   query($path: String!) {
+    allMarkdownRemark {
+      nodes {
+        html
+        frontmatter {
+          title
+          photo
+          date
+          location
+          buy
+        }
+      }
+    }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
@@ -56,7 +69,7 @@ export const musicMemberQuery = graphql`
         instagram
         youtube
         vimeo
-        spotify
+        spotify 
       }
     }
   }

@@ -9,9 +9,9 @@ const MusicPage = ({
         allMarkdownRemark: { edges }
     }
 }) => {
-  const title = "Dream On: Music Collective"
+  const title = "Music Collective"
   const MusicMembers = edges
-    .filter(edge => !!edge.node.frontmatter.order && edge.node.frontmatter.title === 'Music Collective Artist')
+    .filter(edge => edge.node.frontmatter.category === 'Musician')
     .map(edge =>
       <MusicPreview key={edge.node.id} data={edge.node.frontmatter} />
     )
@@ -49,6 +49,7 @@ export const pageQuery = graphql`
             title
             photo
             path
+            category
           }
         }
       }

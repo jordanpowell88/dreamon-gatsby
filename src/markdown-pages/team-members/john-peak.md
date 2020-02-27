@@ -7,4 +7,5 @@ photo: "/images/volunteers/john.jpg"
 facebook: "https://www.facebook.com/jpeak"
 twitter: "https://twitter.com/jpeak"
 instagram: "https://instagram.com/johnpeak"
+category: "Team"
 ---
