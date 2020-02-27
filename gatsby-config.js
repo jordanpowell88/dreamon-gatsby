@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -24,11 +24,48 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `static/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `team`,
+        path: `${__dirname}/src/markdown-pages/team-members`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `music`,
+        path: `${__dirname}/src/markdown-pages/musicians`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `speakers`,
+        path: `${__dirname}/src/markdown-pages/speakers`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `books`,
+        path: `${__dirname}/src/markdown-pages/books`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `events`,
+        path: `${__dirname}/src/markdown-pages/events`,
+      },
+    },
+    `gatsby-transformer-remark`,
+  ],
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
 }

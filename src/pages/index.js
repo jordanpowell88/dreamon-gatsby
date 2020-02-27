@@ -1,21 +1,59 @@
-import React from "react"
-import { Link } from "gatsby"
+import { graphql } from 'gatsby';
+import React from "react";
+import About from '../components/about';
+import Buckets from '../components/buckets';
+import Layout from "../components/layout";
+import PlayVideo from "../components/play-video";
+import SEO from "../components/seo";
+import Slider from '../components/slider';
+import Team from '../components/team/team';
+import TeamPreview from "../components/team/team-preview";
+import Contact from '../components/contact';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = ({
+  data: {
+      allMarkdownRemark: { edges }
+  }
+}) => {
+    const TeamMembers = edges
+      .filter(edge => edge.node.frontmatter.category === 'Team')
+      .map(edge =>
+        <TeamPreview key={edge.node.id} data={edge.node.frontmatter} />
+      )
+
+    return (
+    <Layout>
+        <SEO title="Home" />
+        <Slider />
+        <Buckets />
+        <About />
+        <PlayVideo />
+        <Team TeamMembers={TeamMembers} />
+        <Contact />
+    </Layout>
+    )
+}
 
 export default IndexPage
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___order] }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            order
+            name
+            title
+            photo
+            facebook
+            twitter
+            instagram
+            category
+          }
+        }
+      }
+    }
+  }
+`

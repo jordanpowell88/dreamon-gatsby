@@ -6,7 +6,7 @@
 
 // You can delete this file if you're not using it
 
-import './src/css/global.css';
-import './src/css/normalize.css';
-import './src/css/plugin.css';
-import './src/css/responsive.css';
+import './static/css/global.css';
+import './static/css/normalize.css';
+import './static/css/responsive.css';
+import './static/css/plugin.css';
