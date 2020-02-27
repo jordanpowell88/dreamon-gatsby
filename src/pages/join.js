@@ -1,13 +1,19 @@
 import React from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import PageHeader from '../components/page-header';
 import HubspotForm from 'react-hubspot-form';
 
-const Contact = () => (
+const JoinPage = () => (
+  <Layout>
+    <SEO title="Join" />
+    <PageHeader title="Join" />
     <section className="contact-area section-padding" id="contact">
         <div className="container">
             <div className="row">
                 <div className="col-sm-8 col-sm-offset-2">
                     <div className="title text-center">
-                        <h2>contact us</h2>
+                        <h2>Join The Dream Team</h2>
                         <div className="separate"><span className="separate-icon"></span></div>
                     </div>
                 </div>
@@ -17,7 +23,7 @@ const Contact = () => (
                     <div className="contact-form">
                     <HubspotForm
                         portalId="7228931"
-                        formId="77d53777-1d41-40c0-8d9a-cae73ea4fcca"
+                        formId="efdcf5d0-6f5b-4800-988b-7b10dea2487c"
                         loading={<div>Loading...</div>}
                     />
                     </div>
@@ -25,5 +31,6 @@ const Contact = () => (
             </div>
         </div>
     </section>
+  </Layout>
 )
-export default Contact;
+export default JoinPage;
