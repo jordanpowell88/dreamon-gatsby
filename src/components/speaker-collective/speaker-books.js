@@ -6,7 +6,7 @@ const BookPreview = ({
   <>
     <div className="col-sm-8 col-sm-offset-2">
       <div className="col-sm-4">
-        <img src={book.frontmatter.photo} />
+        <img src={book.frontmatter.photo} alt={book.frontmatter.name} />
       </div>
       <div className="col-sm-8">
         <p dangerouslySetInnerHTML={{ __html: book.html }}></p>

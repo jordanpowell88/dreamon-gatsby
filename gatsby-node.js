@@ -8,6 +8,17 @@
 
 const path = require(`path`)
 
+exports.onCreateWebpackConfig = ({
+  actions,
+}) => {
+  const { setWebpackConfig } = actions;
+  setWebpackConfig({
+    externals: {
+      jquery: 'jQuery', // important: 'Q' capitalized
+    }
+  })
+}
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 

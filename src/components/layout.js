@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import React from "react";
 import Footer from "./footer";
 import Header from "./header";
-import Loader from './loader';
-
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

@@ -17,9 +17,9 @@ const TeamPreview = ({
             <div className="single-team-con">
                 <div className="single-team-txt">
                     <ul>
-                        {facebook ? <li><a href={facebook} target="_blank"><i className="fa fa-facebook" aria-hidden="true"></i></a></li> : null}
-                        {twitter ? <li><a href={twitter} target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a></li> : null}
-                        {instagram ? <li><a href={instagram} target="_blank"><i className="fa fa-instagram" aria-hidden="true"></i></a></li> : null}
+                        {facebook ? <li><a href={facebook} target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook" aria-hidden="true"></i> </a></li> : null}
+                        {twitter ? <li><a href={twitter} target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter" aria-hidden="true"></i> </a></li> : null}
+                        {instagram ? <li><a href={instagram} target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram" aria-hidden="true"></i> </a></li> : null}
                     </ul>
                 </div>
             </div>

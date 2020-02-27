@@ -62,7 +62,7 @@ const About = () => (
                         <i className="fa fa-money" aria-hidden="true"></i>
                     </div>
                     <p>We aren't able to do anything without the support of people like you. </p>
-                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCJ6SAWVF5U5Q" target="_blank" className="tem-btn nav-link move-eff"><span>donate now</span></a>
+                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCJ6SAWVF5U5Q" target="_blank" rel="noopener noreferrer" className="tem-btn nav-link move-eff"><span>donate now</span></a>
                 </div>
             </div>
         </div>
