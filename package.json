@@ -17,6 +17,7 @@
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-transformer-remark": "^2.6.50",
     "gatsby-transformer-sharp": "^2.3.7",
+    "jquery": "^3.4.1",
     "nodemailer": "^6.4.2",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
