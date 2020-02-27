@@ -19,9 +19,9 @@ const Menu = () => (
                             <li><Link className="nav-link" to="/">home</Link></li>
                             <li><Link className="nav-link" to="/about">about</Link></li>
                             <li className="dropdown">
-                                <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">missions<span className="caret"></span></a>
+                                <a className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">missions<span className="caret"></span></a>
                                 <ul className="dropdown-menu">
-                                    <li><a href="https://dreamon.focusmissions.com/!/#/17348/honduras-2020" target="_blank">honduras</a></li>
+                                    <li><a href="https://dreamon.focusmissions.com/!/#/17348/honduras-2020" target="_blank" rel="noopener noreferrer">honduras</a></li>
                                     <li><Link to="/guatemala">guatemala</Link></li>
                                 </ul>
                             </li>
@@ -31,7 +31,6 @@ const Menu = () => (
                             <li><Link className="nav-link" to="/events">events</Link></li>
                             <li><a className="nav-link" href="https://shop.dreamon.world">store</a></li>
                             <li><Link className="nav-link" to="/contact">contact</Link></li>
-                            {/* <li><a className="nav-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCJ6SAWVF5U5Q">donate</a></li> */}
                         </ul>
                     </div>
                 </div>
