@@ -11,53 +11,30 @@ const path = require(`path`)
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const teamMemberTemplate = path.resolve(`src/templates/TeamMember.js`)
   const musicianTemplate = path.resolve(`src/templates/MusicMember.js`)
   const speakerTemplate = path.resolve(`src/templates/SpeakerMember.js`)
 
-  const teamMemberResult = await graphql(`
+  const markdownResults = await graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___order] }
-        limit: 100
-      ) {
+      allMarkdownRemark {
         edges {
           node {
+            id
             frontmatter {
+              title
               path
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const musicianResult = await graphql(`
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___order] }
-        limit: 100
-      ) {
-        edges {
-          node {
-            frontmatter {
-              path
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const speakerResult = await graphql(`
-    {
-      allMarkdownRemark(
-        limit: 100
-      ) {
-        edges {
-          node {
-            frontmatter {
-              path
+              order
+              name
+              photo
+              facebook
+              twitter
+              instagram
+              youtube
+              vimeo
+              spotify
+              date
+              author
+              buy
             }
           }
         }
@@ -66,32 +43,28 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   `)
 
   // Handle errors
-  if (teamMemberResult.errors || musicianResult.errors || speakerResult.errors) {
+  if (markdownResults.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
 
-  teamMemberResult.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: teamMemberTemplate,
-      context: {}, // additional data can be passed via context
-    })
-  })
+  markdownResults.data.allMarkdownRemark.edges
+    .filter(edge => edge.node.frontmatter.title === 'Music Collective Artist')
+    .forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: musicianTemplate,
+        context: {}
+      })
+    });
 
-  musicianResult.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: musicianTemplate,
-      context: {}
+  markdownResults.data.allMarkdownRemark.edges
+    .filter(edge => edge.node.frontmatter.title === 'Speaker Collective Speaker')
+    .forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: speakerTemplate,
+        context: {}
+      })
     })
-  })
-
-  speakerResult.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: speakerTemplate,
-      context: {}
-    })
-  })
 }

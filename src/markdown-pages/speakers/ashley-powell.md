@@ -1,11 +1,12 @@
 ---
 path: "/speakers/ashley-powell"
-order: 1
+order: 2
 name: "Ashley Powell"
 title: "Speaker Collective Speaker"
 photo: "/images/volunteers/ashley-powell.jpg"
 videos: []
 facebook: "https://www.facebook.com/ashley.l.powell.5"
+instagram: "https://www.instagram.com/ashleyleepowell/"
 ---
 
 # About Ashley Powell

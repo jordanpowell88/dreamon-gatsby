@@ -421,6 +421,18 @@ input:focus {
     position: relative
 }
 
+.page-title-area-ben {
+    background:url('../images/volunteers/ben-swartz-live.jpg') no-repeat scroll center top / cover;
+    padding: 600px 0 100px;
+    position: relative
+}
+
+.page-title-area-hanna {
+    background:url('../images/volunteers/hanna-swartz-live.jpg') no-repeat scroll center top / cover;
+    padding: 600px 0 100px;
+    position: relative
+}
+
 .page-title-area::before,
 .page-title-area-simmons::before,
 .page-title-area-zac::before,

@@ -14,7 +14,8 @@ const SpeakerMember = ({
     facebook: frontmatter.facebook,
     instagram: frontmatter.instagram,
   }
-  const books = data.allMarkdownRemark.nodes;
+  const books = data.allMarkdownRemark.nodes
+    .filter(book => book.frontmatter.author === frontmatter.name)
   return (
     <Layout>
       <SEO title={frontmatter.name} />
@@ -23,8 +24,7 @@ const SpeakerMember = ({
         <div className="container">
           <div className="row">
             <div className="col-md-12" dangerouslySetInnerHTML={{ __html: html }}></div>
-
-            <SpeakerBooks name={frontmatter.name} books={books} />
+            <SpeakerBooks books={books} />
           </div>
         </div>
       </div>

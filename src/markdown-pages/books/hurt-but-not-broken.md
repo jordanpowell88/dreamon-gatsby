@@ -4,6 +4,7 @@ date: "2019-05-19"
 title: "Hurt But Not Broken"
 author: "Ty Watson"
 photo: "/images/news/hurt-but-not-broken.jpg"
+category: "Books"
 buy: "https://www.amazon.com/Hurt-But-Broken-Tyler-Watson/dp/1093260998/ref=sr_1_1?crid=3FTBZQJDJFZE7&keywords=hurt+but+not+broken+tyler+watson&qid=1573660541&sprefix=hurt+but+not+%2Caps%2C149&sr=8-1"
 ---
 

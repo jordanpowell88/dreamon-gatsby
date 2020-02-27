@@ -9,6 +9,7 @@ import Slider from '../components/slider';
 import Team from '../components/team';
 import TeamPreview from "../components/team-preview";
 import Contact from '../components/contact';
+import { teamMembersFilter } from './about';
 
 
 const IndexPage = ({
@@ -16,8 +17,7 @@ const IndexPage = ({
       allMarkdownRemark: { edges }
   }
 }) => {
-    const TeamMembers = edges
-      .filter(edge => !!edge.node.frontmatter.order && edge.node.frontmatter.title !== 'Music Collective Artist')
+    const TeamMembers = teamMembersFilter(edges)
       .map(edge =>
         <TeamPreview key={edge.node.id} data={edge.node.frontmatter} />
       )
@@ -50,10 +50,10 @@ export const pageQuery = graphql`
             facebook
             twitter
             instagram
+            category
           }
         }
       }
     }
   }
-
 `

@@ -17,13 +17,7 @@ const Menu = () => (
                     <div className="collapse navbar-collapse main-menu" id="bs-example-navbar-collapse-1">
                         <ul className="nav navbar-nav">
                             <li><Link className="nav-link" to="/">home</Link></li>
-                            <li className="dropdown">
-                                <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">about<span className="caret"></span></a>
-                                <ul className="dropdown-menu">
-                                    <li><Link to="/#about">about us</Link></li>
-                                    <li><Link to="/#volunteers">dream team</Link></li>
-                                </ul>
-                            </li>
+                            <li><Link className="nav-link" to="/about">about</Link></li>
                             <li className="dropdown">
                                 <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">missions<span className="caret"></span></a>
                                 <ul className="dropdown-menu">
@@ -33,7 +27,7 @@ const Menu = () => (
                             </li>
                             <li><Link className="nav-link" to="/music">music</Link></li>
                             <li><Link className="nav-link" to="/speakers">speakers</Link></li>
-                            <li><Link className="nav-link" to="/podcast">podcast</Link></li>
+                            {/* <li><Link className="nav-link" to="/podcast">podcast</Link></li> */}
                             <li><Link className="nav-link" to="/events">events</Link></li>
                             <li><a className="nav-link" href="https://shop.dreamon.world">store</a></li>
                             <li><Link className="nav-link" to="/contact">contact</Link></li>

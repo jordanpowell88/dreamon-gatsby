@@ -1,19 +1,20 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PageHeader from '../components/page-header';
-import MusicPreview from '../components/music-collective/music-preview';
+import SpeakerPreview from '../components/speaker-collective/speaker-preview';
 
-const MusicPage = ({
-    data: {
-        allMarkdownRemark: { edges }
-    }
+const SpeakersPage = ({
+  data: {
+    allMarkdownRemark: { edges }
+  }
 }) => {
-  const title = "Dream On: Music Collective"
-  const MusicMembers = edges
-    .filter(edge => !!edge.node.frontmatter.order && edge.node.frontmatter.title === 'Music Collective Artist')
-    .map(edge =>
-      <MusicPreview key={edge.node.id} data={edge.node.frontmatter} />
+  const title = "Dream On: Speaker Collective"
+  const SpeakerMembers = edges
+    .filter(edge => !!edge.node.frontmatter.order && edge.node.frontmatter.title === 'Speaker Collective Speaker')
+    .map(edge => 
+      <SpeakerPreview key={edge.node.id} data={edge.node.frontmatter} /> 
     )
   return (
     <Layout>
@@ -26,9 +27,9 @@ const MusicPage = ({
                 <div className="col-md-12">
                     <div className="col-sm-8 col-sm-offset-2">
                         <h1 className="text-center">Meet The Collective</h1>
-                        <p>Dream On: Music Collective is a team of writers, singers, musicians, and worshippers. We are passionate about pursuing the presence of God in every area of our lives and re-sparking the dreams and purposes God has put in each and everyone’s life.</p>
+                        <p>Dream On: Speaker Collective is a team of authors, speakers, and preachers. We are passionate about empowering and teaching others to pursue their dreams and purposes God has put in each and everyone’s life.</p>
                     </div>
-                    {MusicMembers}
+                    {SpeakerMembers}
                 </div>
             </div>
         </div>
@@ -36,7 +37,7 @@ const MusicPage = ({
     </Layout>
   )
 }
-export default MusicPage;
+export default SpeakersPage;
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___order] }) {

@@ -3,7 +3,7 @@ path: "/speakers/ty-watson"
 order: 1
 name: "Ty Watson"
 title: "Speaker Collective Speaker"
-photo: "/images/volunteers/ty-watson.jpg"
+photo: "/images/volunteers/tyler-watson.jpg"
 videos: []
 facebook: "https://www.facebook.com/ty.watson.925"
 ---

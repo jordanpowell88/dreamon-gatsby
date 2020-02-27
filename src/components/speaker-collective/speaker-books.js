@@ -17,25 +17,25 @@ const BookPreview = ({
 )
 
 const SpeakerBooks = ({
-  name,
   books
 }) => {
   const Books = books
     ? books
-        .filter(book => book.frontmatter.author === name)
         .map((book, i) =>
           <BookPreview key={i} book={book} />
         )
     : null;
+
+  console.log(Books);
   return (
       <>
-        {Books
+        {Books.length > 0
           ? <>
               <h2 className="text-center">Resources</h2>
               <hr />
               {Books}
             </>
-          : null
+          : <></>
         }
       </>
   )
