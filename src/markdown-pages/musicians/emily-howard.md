@@ -1,9 +1,9 @@
 ---
-path: "/music/zac-howard"
-order: 1
-name: "Zac Howard"
+path: "/music/emily-howard"
+order: 2
+name: "Emily Howard"
 title: "Music Collective Artist"
-photo: "/images/volunteers/zac-howard.jpg"
+photo: "/images/volunteers/emily-howard.jpg"
 videos: ["https://www.youtube.com/embed/stEUWnAP47c", "https://www.youtube.com/embed/2Hr4oPQufXg"]
 facebook: "https://www.facebook.com/howardworship/"
 instagram: "https://www.instagram.com/zacandemilyhowardworship/"
@@ -12,7 +12,7 @@ vimeo: "https://vimeo.com/zacandemilyhoward"
 spotify: "https://open.spotify.com/artist/4JfkhskN6Qelmki1ZLyQWc?si=RdpBSqBcQqiKZ2mECtGPsw"
 ---
 
-# About Zac Howard
+# About Emily Howard
 
 Zac and Emily Howard are worship leaders, songwriters, and pastors who joined the Dream On Music Collective in January of 2018.
 

@@ -13,6 +13,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const teamMemberTemplate = path.resolve(`src/templates/TeamMember.js`)
   const musicianTemplate = path.resolve(`src/templates/MusicMember.js`)
+  const speakerTemplate = path.resolve(`src/templates/SpeakerMember.js`)
 
   const teamMemberResult = await graphql(`
     {
@@ -48,8 +49,24 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
+  const speakerResult = await graphql(`
+    {
+      allMarkdownRemark(
+        limit: 100
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `)
+
   // Handle errors
-  if (teamMemberResult.errors || musicianResult.errors) {
+  if (teamMemberResult.errors || musicianResult.errors || speakerResult.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
@@ -66,6 +83,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     createPage({
       path: node.frontmatter.path,
       component: musicianTemplate,
+      context: {}
+    })
+  })
+
+  speakerResult.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: speakerTemplate,
       context: {}
     })
   })

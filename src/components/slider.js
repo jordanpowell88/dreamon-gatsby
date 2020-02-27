@@ -11,10 +11,10 @@ const Slider = () => (
                 <div className="col-lg-6 col-md-6 col-md-offset-1 col-lg-offset-0 col-sm-8">
                     <div className="single-banner-con">
                         <div className="single-banner-txt">
-                            <h1><span>dream on:</span> 2019 Documentary</h1>
-                            <p className="fadeIn animated animated-08s">November 3rd, 2018</p>
+                            <h1><span>dream on:</span> 2020</h1>
+                            <p className="fadeIn animated animated-08s">November 4 - 8, 2020</p>
                             <a href="https://www.youtube.com/watch?v=_HWe8m0N60Y" target="_blank" className="tem-btn nav-link move-eff"><span>Watch</span></a>
-                            <a href="/honduras" className="tem-btn nav-link move-eff"><span>join our next trip</span></a>                                
+                            <a href="https://dreamon.focusmissions.com/!/#/17348/honduras-2020" target="_blank" className="tem-btn nav-link move-eff"><span>join our next trip</span></a>                                
                         </div>
                     </div>
                 </div>

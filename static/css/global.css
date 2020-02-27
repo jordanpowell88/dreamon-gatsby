@@ -387,25 +387,37 @@ input:focus {
 
 .page-title-area-zac {
     background:url('../images/volunteers/zac-howard-live.jpg') no-repeat scroll center top / cover;
-    padding: 180px 0 100px;
+    padding: 600px 0 100px;
     position: relative
 }
 
 .page-title-area-emily {
     background:url('../images/volunteers/emily-howard-live.jpg') no-repeat scroll center top / cover;
-    padding: 180px 0 100px;
+    padding: 600px 0 100px;
     position: relative
 }
 
 .page-title-area-lucas {
     background:url('../images/volunteers/lucas-gray-live.jpg') no-repeat scroll center top / cover;
-    padding: 180px 0 100px;
+    padding: 600px 0 100px;
     position: relative
 }
 
 .page-title-area-lilli {
     background:url('../images/volunteers/lilli-gray-live.jpg') no-repeat scroll center top / cover;
-    padding: 180px 0 100px;
+    padding: 600px 0 100px;
+    position: relative
+}
+
+.page-title-area-ty {
+    background:url('../images/volunteers/tyler-watson-live.jpg') no-repeat scroll center top / cover;
+    padding: 600px 0 100px;
+    position: relative
+}
+
+.page-title-area-ashley {
+    background:url('../images/volunteers/ashley-powell-live.jpg') no-repeat scroll center top / cover;
+    padding: 600px 0 100px;
     position: relative
 }
 
@@ -471,6 +483,18 @@ ul.breadcrumb li a {
 .breadcrumb > .active {
     color: #fff;
     font-size: 14px;
+}
+
+/*  ==========================
+        socials
+    ========================== */
+
+.socials {
+    padding: 2rem 0;
+}
+.socials a:link, .socials a:visited {
+    color:#fff;
+    padding: 0 .5rem;
 }
 
 /*  ==========================

@@ -31,15 +31,29 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `team-members`,
+        name: `team`,
         path: `${__dirname}/src/markdown-pages/team-members`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `music-members`,
+        name: `music`,
         path: `${__dirname}/src/markdown-pages/musicians`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `speakers`,
+        path: `${__dirname}/src/markdown-pages/speakers`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `books`,
+        path: `${__dirname}/src/markdown-pages/books`,
       },
     },
     `gatsby-transformer-remark`,

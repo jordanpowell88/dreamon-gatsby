@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 const Buckets = () => (
   <section className="donate-wraper">
     <div className="single-donate-wraper donate-wraper-bg-one">
         <h2>get details about joining our next trip</h2>
-        <Link to="/honduras" className="tem-btn nav-link move-eff"><span>join</span></Link>
+        <a href="https://dreamon.focusmissions.com/!/#/17348/honduras-2020" target="_blank" className="tem-btn nav-link move-eff"><span>join</span></a>
     </div>
     <div className="single-donate-wraper donate-wraper-bg-two">
         

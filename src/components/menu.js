@@ -27,7 +27,7 @@ const Menu = () => (
                             <li className="dropdown">
                                 <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">missions<span className="caret"></span></a>
                                 <ul className="dropdown-menu">
-                                    <li><Link to="/honduras">honduras</Link></li>
+                                    <li><a href="https://dreamon.focusmissions.com/!/#/17348/honduras-2020" target="_blank">honduras</a></li>
                                     <li><Link to="/guatemala">guatemala</Link></li>
                                 </ul>
                             </li>
