@@ -539,6 +539,7 @@ nav {
 .navbar-default {
     background-color: transparent;
     border-color: transparent;
+    box-shadow: none !important;
 }
 
 .navbar-nav {

@@ -1,8 +1,9 @@
 module.exports = {
+  pathPrefix: '/',
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Dream On: Global`,
+    description: `content="Dream On: Global - We are a group of young adults that have a calling to spark dreams and purposes back into the hearts of the world"`,
+    author: `@jordanpowell88`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,7 +25,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `static/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `static/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',

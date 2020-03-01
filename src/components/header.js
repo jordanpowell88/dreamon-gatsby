@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { Helmet } from 'react-helmet';
 import Logo from './logo';
 import Menu from './menu';
+import { Component } from 'react';
 
 export default class Header extends Component {
   constructor(props) {

@@ -1,15 +1,19 @@
 import { graphql } from 'gatsby';
 import React from "react";
+import Loadable from 'react-loadable';
 import About from '../components/about';
 import Buckets from '../components/buckets';
+import Contact from '../components/contact';
 import Layout from "../components/layout";
 import PlayVideo from "../components/play-video";
 import SEO from "../components/seo";
-import Slider from '../components/slider';
 import Team from '../components/team/team';
 import TeamPreview from "../components/team/team-preview";
-import Contact from '../components/contact';
 
+const LoadableSlider = Loadable({
+  loader: () => import('../components/slider'),
+  loading: () => (<></>)
+})
 
 const IndexPage = ({
   data: {
@@ -25,7 +29,7 @@ const IndexPage = ({
     return (
     <Layout>
         <SEO title="Home" />
-        <Slider />
+        <LoadableSlider />
         <Buckets />
         <About />
         <PlayVideo />

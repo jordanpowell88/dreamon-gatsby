@@ -17,6 +17,14 @@ exports.onCreateWebpackConfig = ({
     actions,
   }) => {
     actions.setWebpackConfig({
+      // module: {
+      //   rules: [
+      //     {
+      //       test: /react-owl-carousel/,
+      //       use: loaders.null(),
+      //     },
+      //   ],
+      // },
       plugins: [
         new webpack.ProvidePlugin({
           $: 'jquery',

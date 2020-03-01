@@ -3,7 +3,6 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import MusicHeader from '../components/music-collective/music-header';
-import MusicCollectiveStore from '../components/music-collective/music-collective-store';
 import MusicCollectiveVideos from '../components/music-collective/music-collective-videos';
 import MusicCollectiveEvents from '../components/music-collective/music-collective-events';
 import { Link } from 'gatsby';
@@ -34,7 +33,6 @@ const MusicMember = ({
               <Link to="/book" className="tem-btn nav-link move-eff"><span>book</span></Link>
               <MusicCollectiveEvents events={events} />
               <MusicCollectiveVideos videos={frontmatter.videos} />
-              <MusicCollectiveStore />
             </div>
           </div>
         </div>
