@@ -892,6 +892,18 @@ nav {
     border: 2px solid #CC446C;
 }
 
+button.owl-dot:first-of-type {
+    background: url('../images/banner/01.jpg');
+}
+
+button.owl-dot:nth-child(2) {
+    background: url('../images/banner/02.jpg')
+}
+
+button.owl-dot:nth-child(3) {
+    background: url('../images/banner/05.jpg')
+}
+
 /*  ==========================
         donate wraper area
     ========================== */
