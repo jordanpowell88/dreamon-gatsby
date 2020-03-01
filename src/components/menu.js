@@ -18,13 +18,14 @@ const Menu = () => (
                         <ul className="nav navbar-nav">
                             <li><Link className="nav-link" to="/">home</Link></li>
                             <li><Link className="nav-link" to="/about">about</Link></li>
-                            <li className="dropdown">
+                            <li><Link className="nav-link" to="/missions">missions</Link></li>
+                            {/* <li className="dropdown">
                                 <a className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">missions<span className="caret"></span></a>
                                 <ul className="dropdown-menu">
                                     <li><a href="https://dreamon.focusmissions.com/!/#/17348/honduras-2020" target="_blank" rel="noopener noreferrer">honduras</a></li>
                                     <li><Link to="/guatemala">guatemala</Link></li>
                                 </ul>
-                            </li>
+                            </li> */}
                             <li><Link className="nav-link" to="/music">music</Link></li>
                             <li><Link className="nav-link" to="/speakers">speakers</Link></li>
                             {/* <li><Link className="nav-link" to="/podcast">podcast</Link></li> */}
