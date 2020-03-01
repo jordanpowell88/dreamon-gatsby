@@ -10,21 +10,9 @@ const path = require(`path`)
 
 const webpack= require('webpack');
 exports.onCreateWebpackConfig = ({
-    stage,
-    rules,
-    loaders,
-    plugins,
     actions,
   }) => {
     actions.setWebpackConfig({
-      // module: {
-      //   rules: [
-      //     {
-      //       test: /react-owl-carousel/,
-      //       use: loaders.null(),
-      //     },
-      //   ],
-      // },
       plugins: [
         new webpack.ProvidePlugin({
           $: 'jquery',
