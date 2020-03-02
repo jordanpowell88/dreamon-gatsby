@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const Menu = () => {
     const [show, setShow] = useState(false);
@@ -25,7 +26,7 @@ const Menu = () => {
                                 <li><Link className="nav-link" to="/music">music</Link></li>
                                 <li><Link className="nav-link" to="/speakers">speakers</Link></li>
                                 <li><Link className="nav-link" to="/events">events</Link></li>
-                                <li><a className="nav-link" href="https://shop.dreamon.world">store</a></li>
+                                <li><OutboundLink className="nav-link" href="https://shop.dreamon.world">store</OutboundLink></li>
                                 <li><Link className="nav-link" to="/contact">contact</Link></li>
                             </ul>
                         </div>

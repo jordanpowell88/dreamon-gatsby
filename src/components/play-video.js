@@ -1,13 +1,14 @@
 import React from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const PlayVideo = () => (
   <section className="video-area parallax">
     <div className="container">
         <div className="row">
             <div className="col-md-12 text-center">
-                <a className="wmBox video-btn hvr-ripple-out" href="https://www.youtube.com/watch?v=4767SJIoVNI" target="_blank" rel="noopener noreferrer">
+                <OutboundLink className="wmBox video-btn hvr-ripple-out" href="https://www.youtube.com/watch?v=4767SJIoVNI" target="_blank" rel="noopener noreferrer">
                     <i className="fa fa-play" aria-hidden="true"></i>
-                </a>
+                </OutboundLink>
                 <h2>play video</h2>
             </div>
         </div>

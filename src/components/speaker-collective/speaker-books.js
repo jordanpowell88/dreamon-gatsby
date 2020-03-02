@@ -1,4 +1,5 @@
 import React from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const BookPreview = ({
   book
@@ -10,7 +11,7 @@ const BookPreview = ({
       </div>
       <div className="col-sm-8">
         <p dangerouslySetInnerHTML={{ __html: book.html }}></p>
-        <a href={book.frontmatter.buy} className="tem-btn nav-link move-eff"><span>Purchase</span></a>
+        <OutboundLink href={book.frontmatter.buy} className="tem-btn nav-link move-eff"><span>Purchase</span></OutboundLink>
       </div>
     </div>
   </>

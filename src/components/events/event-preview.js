@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const EventPreview = ({
   data: {
@@ -14,19 +16,19 @@ const EventPreview = ({
 }) => (
   <div className="col-sm-12">
     <article className="news-info">
-      <a href={path}>
+      <Link to={path}>
         <h2 className="text-center">{name}</h2>
         <div className="news-img">
           <img src={photo} alt={name + " - Dream On: Events"} />      
         </div>        
-      </a>
+      </Link>
 
       <h3 className="text-center">{title}</h3>
       <h4 className="text-center">{date} - {location}</h4>
       <p dangerouslySetInnerHTML={{ __html: html }}></p>
 
       {buy
-        ? <a href={buy} className="tem-btn nav-link move-eff">Register</a>
+        ? <OutboundLink href={buy} className="tem-btn nav-link move-eff">Register</OutboundLink>
         : <></>
       }
 

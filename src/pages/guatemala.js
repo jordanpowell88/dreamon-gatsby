@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PageHeader from '../components/page-header';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const Guatemala = () => {
   const title = "Guatemala"
@@ -19,7 +20,7 @@ const Guatemala = () => {
                     </div>
 
                     <p>Dream ON has partnered with Wright &amp; Schulte an Ohio based law firm. Working with Rick and Tripp Schulte for a Volcano relief fund on August 4th, 2018 in Guatemala City. Those wishing to donate below where 100% of donations will be given to efforts supporting those in Guatemala.</p>                           
-                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DMS79JZ3RVX3U" target="_blank" rel="noopener noreferrer" className="tem-btn nav-link move-eff"><span>donate now</span></a>
+                    <OutboundLink href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DMS79JZ3RVX3U" target="_blank" rel="noopener noreferrer" className="tem-btn nav-link move-eff"><span>donate now</span></OutboundLink>
                     </div>
                 </div>
             </div>

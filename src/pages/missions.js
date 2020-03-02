@@ -2,16 +2,17 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PageHeader from '../components/page-header';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const TripPreview = () => (
   <div className="col-sm-12">
     <article className="news-info">
-      <a href="https://dreamon.focusmissions.com/!/#/17348/honduras-2020">
+      <OutboundLink href="https://dreamon.focusmissions.com/!/#/17348/honduras-2020">
         <h2 className="text-center">Honduras 2020</h2>
         <div className="news-img">
           <img src="images/news/honduras-missions.jpg" alt="Dream On: Honduras" />
         </div>
-      </a>
+      </OutboundLink>
     </article>
   </div>
 )

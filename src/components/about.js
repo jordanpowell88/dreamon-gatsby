@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const About = () => (
   <section className="about-area section-padding" id="about">
@@ -52,7 +53,7 @@ const About = () => (
                         <i className="fa fa-globe" aria-hidden="true"></i>
                     </div>
                     <p>We are partnering with people like you to give children all across the globe their dreams.</p>
-                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCJ6SAWVF5U5Q" className="tem-btn move-eff"><span>learn more</span></a>
+                    <OutboundLink href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCJ6SAWVF5U5Q" className="tem-btn move-eff"><span>learn more</span></OutboundLink>
                 </div>
             </div>
             <div className="col-md-4 col-sm-12">
@@ -62,7 +63,7 @@ const About = () => (
                         <i className="fa fa-money" aria-hidden="true"></i>
                     </div>
                     <p>We aren't able to do anything without the support of people like you. </p>
-                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCJ6SAWVF5U5Q" target="_blank" rel="noopener noreferrer" className="tem-btn nav-link move-eff"><span>donate now</span></a>
+                    <OutboundLink href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCJ6SAWVF5U5Q" target="_blank" rel="noopener noreferrer" className="tem-btn nav-link move-eff"><span>donate now</span></OutboundLink>
                 </div>
             </div>
         </div>

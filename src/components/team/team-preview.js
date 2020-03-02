@@ -1,4 +1,5 @@
 import React from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const TeamPreview = ({
   data: {
@@ -17,9 +18,9 @@ const TeamPreview = ({
             <div className="single-team-con">
                 <div className="single-team-txt">
                     <ul>
-                        {facebook ? <li><a href={facebook} target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook" aria-hidden="true"></i> </a></li> : null}
-                        {twitter ? <li><a href={twitter} target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter" aria-hidden="true"></i> </a></li> : null}
-                        {instagram ? <li><a href={instagram} target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram" aria-hidden="true"></i> </a></li> : null}
+                        {facebook ? <li><OutboundLink href={facebook} target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook" aria-hidden="true"></i> </OutboundLink></li> : null}
+                        {twitter ? <li><OutboundLink href={twitter} target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter" aria-hidden="true"></i> </OutboundLink></li> : null}
+                        {instagram ? <li><OutboundLink href={instagram} target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram" aria-hidden="true"></i> </OutboundLink></li> : null}
                     </ul>
                 </div>
             </div>
