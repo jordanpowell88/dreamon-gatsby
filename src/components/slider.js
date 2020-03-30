@@ -19,6 +19,23 @@ const Slider = () => (
         <i class="fa fa-angle-right" aria-hidden="true"></i>`]}
         nav
     >
+        <div className="item">
+            <div className="single-banner" style={{background: "url('../images/banner/06.jpg')"}}>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6 col-md-6 col-md-offset-1 col-lg-offset-0 col-sm-8">
+                            <div className="single-banner-con">
+                                <div className="single-banner-txt">
+                                    <h1><span>Listen</span> Today</h1>
+                                    <p className="fadeIn animated animated-08s">How Great - Zac &amp; Emily Howard</p>
+                                    <OutboundLink href="https://open.spotify.com/track/0wgX4vbYE3PLUfPGfKmr7G" target="_blank" rel="noopener noreferrer" className="tem-btn nav-link move-eff"><span>Listen on Spotify</span></OutboundLink>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <div className="item">
             <div className="single-banner" style={{background: "url('../images/banner/01.jpg')"}}>
