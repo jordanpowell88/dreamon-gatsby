@@ -7,7 +7,7 @@ photo: "lucas-gray.jpg"
 facebook: "https://www.facebook.com/lucas.gray.37"
 instagram: "https://www.instagram.com/lucasgray95/"
 category: "Musician"
-events: []
+events: ["Dream Session: Lock In"]
 ---
 
 # About Lucas Gray

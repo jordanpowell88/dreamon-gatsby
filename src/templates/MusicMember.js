@@ -19,11 +19,13 @@ const MusicMember = ({
     vimeo: frontmatter.vimeo,
     spotify: frontmatter.spotify
   }
+
   const events = data.allMarkdownRemark.nodes
-    .filter(event =>
+    .filter(event => 
       new Date(event.frontmatter.date) >= new Date() &&
-      frontmatter.category.contains(event.title)
-    )
+      frontmatter.events.includes(event.frontmatter.title)
+    );
+
 
   return (
     <Layout>
@@ -35,7 +37,7 @@ const MusicMember = ({
             <div className="col-md-12" dangerouslySetInnerHTML={{ __html: html }}></div>
             <div className="col-md-12">
               <Link to="/book" className="tem-btn nav-link move-eff"><span>book</span></Link>
-              <MusicCollectiveEvents events={events} photo={data.allFile.edges} />
+              {events.length > 0 ? <MusicCollectiveEvents events={events} photos={data.allFile.edges} /> : null }
               <MusicCollectiveVideos videos={frontmatter.videos} />
             </div>
           </div>
@@ -56,6 +58,7 @@ export const musicMemberQuery = graphql`
           date
           location
           buy
+          events
         }
       }
     }
@@ -72,6 +75,7 @@ export const musicMemberQuery = graphql`
         youtube
         vimeo
         spotify
+        events
       }
     }
     allFile(filter: { relativeDirectory: { eq: "events" }}) {

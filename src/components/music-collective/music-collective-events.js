@@ -5,6 +5,7 @@ const MusicCollectiveEvents = ({
   events,
   photos
 }) => {
+
   const Events = events
     .map((event, i) => 
       <EventPreview key={i} data={event.frontmatter} photos={photos} /> 

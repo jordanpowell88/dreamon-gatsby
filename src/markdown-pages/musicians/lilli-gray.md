@@ -7,7 +7,7 @@ photo: "lilli-gray.jpg"
 facebook: "https://www.facebook.com/lilli.r.bucher"
 instagram: "https://www.instagram.com/lillirosegray/"
 category: "Musician"
-events: []
+events: ["Dream Session: Lock In"]
 ---
 
 # About Lilli Gray

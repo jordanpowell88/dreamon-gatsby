@@ -25,7 +25,7 @@ const EventPreview = ({
     <div className="col-sm-12">
       <article className="news-info">
         {eventPhoto ?
-          <Link to={path}>
+          <Link to={path ? path : ''}>
             <h2 className="text-center">{name}</h2>
             <div className="news-img">
               <Img fluid={eventPhoto} />
