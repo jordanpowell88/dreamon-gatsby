@@ -20,7 +20,11 @@ const MusicMember = ({
     spotify: frontmatter.spotify
   }
   const events = data.allMarkdownRemark.nodes
-    .filter(event => new Date(event.frontmatter.date) >= new Date())
+    .filter(event =>
+      new Date(event.frontmatter.date) >= new Date() &&
+      frontmatter.category.contains(event.title)
+    )
+
   return (
     <Layout>
       <SEO title={frontmatter.name} />
@@ -31,7 +35,7 @@ const MusicMember = ({
             <div className="col-md-12" dangerouslySetInnerHTML={{ __html: html }}></div>
             <div className="col-md-12">
               <Link to="/book" className="tem-btn nav-link move-eff"><span>book</span></Link>
-              <MusicCollectiveEvents events={events} />
+              <MusicCollectiveEvents events={events} photo={data.allFile.edges} />
               <MusicCollectiveVideos videos={frontmatter.videos} />
             </div>
           </div>
@@ -67,7 +71,19 @@ export const musicMemberQuery = graphql`
         instagram
         youtube
         vimeo
-        spotify 
+        spotify
+      }
+    }
+    allFile(filter: { relativeDirectory: { eq: "events" }}) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid,
+              originalName
+            }
+          }
+        }
       }
     }
   }

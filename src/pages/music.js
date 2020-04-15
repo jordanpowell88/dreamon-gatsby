@@ -3,17 +3,19 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PageHeader from '../components/page-header';
 import MusicPreview from '../components/music-collective/music-preview';
+import { graphql } from 'gatsby';
 
 const MusicPage = ({
     data: {
-        allMarkdownRemark: { edges }
+        allMarkdownRemark: { edges },
+        allFile
     }
 }) => {
   const title = "Music Collective"
   const MusicMembers = edges
     .filter(edge => edge.node.frontmatter.category === 'Musician')
     .map(edge =>
-      <MusicPreview key={edge.node.id} data={edge.node.frontmatter} />
+      <MusicPreview key={edge.node.id} data={edge.node.frontmatter} photos={allFile.edges} />
     )
   return (
     <Layout>
@@ -50,6 +52,18 @@ export const pageQuery = graphql`
             photo
             path
             category
+          }
+        }
+      }
+    },
+    allFile(filter: {relativeDirectory: { eq: "volunteers" }}) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid,
+              originalName
+            }
           }
         }
       }

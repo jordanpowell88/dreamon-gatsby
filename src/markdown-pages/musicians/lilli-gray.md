@@ -3,10 +3,11 @@ path: "/music/lilli-gray"
 order: 4
 name: "Lilli Gray"
 title: "Music Collective Artist"
-photo: "/images/volunteers/lilli-gray.jpg"
+photo: "lilli-gray.jpg"
 facebook: "https://www.facebook.com/lilli.r.bucher"
 instagram: "https://www.instagram.com/lillirosegray/"
 category: "Musician"
+events: []
 ---
 
 # About Lilli Gray

@@ -3,6 +3,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PageHeader from '../components/page-header';
 import EventPreview from '../components/events/event-preview';
+import { graphql } from 'gatsby';
 
 const EventTemplate = ({
   data

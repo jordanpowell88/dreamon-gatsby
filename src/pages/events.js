@@ -3,10 +3,12 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PageHeader from '../components/page-header';
 import EventPreview from '../components/events/event-preview';
+import { graphql } from 'gatsby';
 
 const EventsPage = ({
   data: {
-    allMarkdownRemark: { edges }
+    allMarkdownRemark: { edges },
+    allFile
   }
 }) => {
   const title="Upcoming Events"
@@ -14,7 +16,7 @@ const EventsPage = ({
     .filter(edge => edge.node.frontmatter.category === 'Events' &&
       new Date(edge.node.frontmatter.date) >= new Date())
     .map(edge =>
-      <EventPreview key={edge.node.id} data={edge.node.frontmatter} html={edge.node.html} />
+      <EventPreview key={edge.node.id} data={edge.node.frontmatter} html={edge.node.html} photos={allFile.edges} />
     );
 
   return (
@@ -55,6 +57,18 @@ export const pageQuery = graphql`
             path
             buy
             location
+          }
+        }
+      }
+    },
+    allFile(filter: { relativeDirectory: { eq: "events" }}) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid,
+              originalName
+            }
           }
         }
       }

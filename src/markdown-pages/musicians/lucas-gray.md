@@ -3,10 +3,11 @@ path: "/music/lucas-gray"
 order: 3
 name: "Lucas Gray"
 title: "Music Collective Artist"
-photo: "/images/volunteers/lucas-gray.jpg"
+photo: "lucas-gray.jpg"
 facebook: "https://www.facebook.com/lucas.gray.37"
 instagram: "https://www.instagram.com/lucasgray95/"
 category: "Musician"
+events: []
 ---
 
 # About Lucas Gray

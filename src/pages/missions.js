@@ -3,19 +3,34 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PageHeader from '../components/page-header';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-const TripPreview = () => (
-  <div className="col-sm-12">
-    <article className="news-info">
-      <OutboundLink href="https://dreamon.focusmissions.com/!/#/17348/honduras-2020">
-        <h2 className="text-center">Honduras 2020</h2>
-        <div className="news-img">
-          <img src="images/news/honduras-missions.jpg" alt="Dream On: Honduras" />
-        </div>
-      </OutboundLink>
-    </article>
-  </div>
-)
+const TripPreview = () => {
+  const hondurasMissionsPhoto = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "news/honduras-missions.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <div className="col-sm-12">
+      <article className="news-info">
+        <OutboundLink href="https://dreamon.focusmissions.com/!/#/17348/honduras-2020">
+          <h2 className="text-center">Honduras 2020</h2>
+          <div className="news-img">
+            <Img fluid={hondurasMissionsPhoto.file.childImageSharp.fluid} />
+          </div>
+        </OutboundLink>
+      </article>
+    </div>
+  )
+}
 
 const MissionsPage = () => {
   const title = 'Missions';

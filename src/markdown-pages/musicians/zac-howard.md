@@ -3,7 +3,7 @@ path: "/music/zac-howard"
 order: 1
 name: "Zac Howard"
 title: "Music Collective Artist"
-photo: "/images/volunteers/zac-howard.jpg"
+photo: "zac-howard.jpg"
 videos: ["https://www.youtube.com/embed/stEUWnAP47c", "https://www.youtube.com/embed/2Hr4oPQufXg"]
 facebook: "https://www.facebook.com/howardworship/"
 instagram: "https://www.instagram.com/zacandemilyhowardworship/"
@@ -11,6 +11,7 @@ youtube: "https://www.youtube.com/channel/UCxQK3GD5Qp75pyeTs55E2Gw"
 vimeo: "https://vimeo.com/zacandemilyhoward"
 spotify: "https://open.spotify.com/artist/4JfkhskN6Qelmki1ZLyQWc?si=RdpBSqBcQqiKZ2mECtGPsw"
 category: "Musician"
+events: []
 ---
 
 # About Zac Howard

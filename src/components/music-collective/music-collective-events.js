@@ -2,11 +2,12 @@ import React from 'react';
 import EventPreview from '../events/event-preview';
 
 const MusicCollectiveEvents = ({
-  events
+  events,
+  photos
 }) => {
   const Events = events
     .map((event, i) => 
-      <EventPreview key={i} data={event.frontmatter} /> 
+      <EventPreview key={i} data={event.frontmatter} photos={photos} /> 
     )
   return (
     <>

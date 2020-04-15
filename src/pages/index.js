@@ -17,13 +17,14 @@ const LoadableSlider = Loadable({
 
 const IndexPage = ({
   data: {
-      allMarkdownRemark: { edges }
+      allMarkdownRemark: { edges },
+      allFile
   }
 }) => {
     const TeamMembers = edges
       .filter(edge => edge.node.frontmatter.category === 'Team')
       .map(edge =>
-        <TeamPreview key={edge.node.id} data={edge.node.frontmatter} />
+        <TeamPreview key={edge.node.id} data={edge.node.frontmatter} photos={allFile.edges} />
       )
 
     return (
@@ -55,6 +56,18 @@ export const pageQuery = graphql`
             twitter
             instagram
             category
+          }
+        }
+      }
+    },
+    allFile(filter: { relativeDirectory: { eq: "volunteers" }}) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 300) {
+              ...GatsbyImageSharpFluid,
+              originalName
+            }
           }
         }
       }
