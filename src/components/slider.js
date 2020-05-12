@@ -28,7 +28,7 @@ const Slider = () => (
                             <div className="single-banner-con">
                                 <div className="single-banner-txt">
                                     <h1><span>dream on:</span> Honduras 2020</h1>
-                                    <p className="fadeIn animated animated-08s">November 3rd, 2018</p>
+                                    <p className="fadeIn animated animated-08s">November 4th, 2020</p>
                                     <OutboundLink href="https://www.youtube.com/watch?v=_HWe8m0N60Y" target="_blank" rel="noopener noreferrer" className="tem-btn nav-link move-eff"><span>Watch Previous Trip</span></OutboundLink>
                                     <OutboundLink href="https://dreamon.focusmissions.com/!/#/17348/honduras-2020" className="tem-btn nav-link move-eff"><span>join the trip</span></OutboundLink>
                                 </div>
