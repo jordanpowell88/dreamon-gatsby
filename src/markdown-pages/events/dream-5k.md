@@ -9,4 +9,4 @@ buy: "https://runsignup.com/Race/OH/Sidney/DreamOn5k?fbclid=IwAR1vvdX7FHm7b_R3WP
 category: "Events"
 ---
 
-Dream On: Global is partnering with area youth ministries to present Dream Session: Lock In in Ceina, Ohio on Friday March 20th from 6:00pm - 12:am. The night will feature free food, games and live worship from Dream On's Music Collective featuring Zac & Emily Howard as well as Lucas & Lilli Gray.
+Dream On: Global will be hosting their very first 5K run on Saturday August 1st, at Tawawa Park in Sidney, Ohio. Register online by July 12th for $25. Race Day registration $25 (race goodies not guaranteed). All proceeds from this race will be used to further our work both locally and in Central America
