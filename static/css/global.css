@@ -409,6 +409,12 @@ input:focus {
     position: relative
 }
 
+.page-title-area-blake {
+    background:url('../images/volunteers/blake-reynolds-live.jpg') no-repeat scroll center top / cover;
+    padding: 600px 0 100px;
+    position: relative;
+}
+
 .page-title-area-ty {
     background:url('../images/volunteers/tyler-watson-live.jpg') no-repeat scroll center top / cover;
     padding: 600px 0 100px;

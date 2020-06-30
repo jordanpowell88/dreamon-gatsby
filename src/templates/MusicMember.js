@@ -31,8 +31,8 @@ const MusicMember = ({
             <div className="col-md-12" dangerouslySetInnerHTML={{ __html: html }}></div>
             <div className="col-md-12">
               <Link to="/book" className="tem-btn nav-link move-eff"><span>book</span></Link>
-              <MusicCollectiveEvents events={events} />
               <MusicCollectiveVideos videos={frontmatter.videos} />
+              <MusicCollectiveEvents events={events} />
             </div>
           </div>
         </div>
@@ -43,7 +43,9 @@ const MusicMember = ({
 export default MusicMember;
 export const musicMemberQuery = graphql`
   query($path: String!) {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      sort: { order: ASC, fields: [frontmatter___date] }
+    ) {
       nodes {
         html
         frontmatter {
