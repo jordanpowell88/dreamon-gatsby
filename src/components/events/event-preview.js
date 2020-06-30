@@ -14,7 +14,7 @@ const EventPreview = ({
   },
   html
 }) => (
-  <div className="col-sm-12">
+  <div className="col">
     <article className="news-info">
       <Link to={path}>
         <h2 className="text-center">{name}</h2>
