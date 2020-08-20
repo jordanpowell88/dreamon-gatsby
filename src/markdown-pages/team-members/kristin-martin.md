@@ -1,6 +1,6 @@
 ---
 path: "/team/kristin-martin"
-order: 11
+order: 12
 name: "Kristin Martin"
 title: "Event Coordinator"
 photo: "/images/volunteers/kristin.jpg"
