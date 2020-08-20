@@ -1,6 +1,6 @@
 ---
 path: "/team/john-peak"
-order: 5
+order: 6
 name: "John Peak"
 title: "Director of Media"
 photo: "/images/volunteers/john.jpg"
