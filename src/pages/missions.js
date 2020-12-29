@@ -7,12 +7,22 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics';
 const TripPreview = () => (
   <div className="col-sm-12">
     <article className="news-info">
-      <OutboundLink href="https://dreamon.focusmissions.com/!/#/17348/honduras-2020">
-        <h2 className="text-center">Honduras 2020</h2>
+      {/* <OutboundLink href="https://dreamon.focusmissions.com/!/#/17348/honduras-2020"> */}
+        <h2 className="text-center">Brazil</h2>
+        <h4 className="text-center">January 2021</h4>
+        <div className="news-img">
+          <img src="images/banner/brazil.jpg" alt="Dream On: Brazil" />
+        </div>
+      {/* </OutboundLink> */}
+    </article>
+    <article className="news-info">
+      {/* <OutboundLink href="https://dreamon.focusmissions.com/!/#/17348/honduras-2020"> */}
+        <h2 className="text-center">Honduras</h2>
+        <h4 className="text-center">March 2021</h4>
         <div className="news-img">
           <img src="images/news/honduras-missions.jpg" alt="Dream On: Honduras" />
         </div>
-      </OutboundLink>
+      {/* </OutboundLink> */}
     </article>
   </div>
 )
