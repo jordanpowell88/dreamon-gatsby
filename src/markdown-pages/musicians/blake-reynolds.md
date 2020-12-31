@@ -4,7 +4,7 @@ order: 5
 name: "Blake Reynolds"
 title: "Music Collective Artist"
 photo: "/images/volunteers/blake-reynolds.jpg"
-videos: ["https://www.youtube.com/embed/sXDfALULSkI", "https://www.youtube.com/embed/GVaZmESUOS0", "https://www.youtube.com/embed/uGx2wKwfBd8", "https://www.youtube.com/embed/gg-wT0c46Y8"]
+videos: ["https://www.youtube.com/embed/sXDfALULSkI", "https://www.youtube.com/embed/GVaZmESUOS0", "https://www.youtube.com/embed/uGx2wKwfBd8", "https://www.youtube.com/embed/gg-wT0c46Y8", "https://open.spotify.com/embed/playlist/0hvJFdTeAT1DQyZy5jqaHH"]
 facebook: "https://www.facebook.com/blakereynoldsmusic/"
 instagram: "https://www.instagram.com/blakereynoldsmusic/"
 youtube: "https://www.youtube.com/user/blakereynoldz8"
