@@ -15,6 +15,9 @@ function getSpeakerPageTitleArea(name) {
 
         case 'Hanna Swartz':
             return 'page-title-area-hanna parralax';
+
+        case 'Rob Kennedy':
+            return 'page-title-area-rob parralax';
     
         default:
             return 'page-title-area parralax';
