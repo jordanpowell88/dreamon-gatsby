@@ -16,7 +16,6 @@ const MusicMember = ({
     facebook: frontmatter.facebook,
     instagram: frontmatter.instagram,
     youtube: frontmatter.youtube,
-    vimeo: frontmatter.vimeo,
     spotify: frontmatter.spotify
   }
   const events = data.allMarkdownRemark.nodes
@@ -68,7 +67,6 @@ export const musicMemberQuery = graphql`
         facebook
         instagram
         youtube
-        vimeo
         spotify 
       }
     }

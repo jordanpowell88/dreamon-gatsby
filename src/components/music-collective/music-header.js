@@ -45,7 +45,6 @@ const MusicHeader = ({
                                 {socials.facebook ? <OutboundLink href={socials.facebook} target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook-official fa-2x" aria-hidden="true"></i> </OutboundLink> : null}
                                 {socials.instagram ? <OutboundLink href={socials.instagram} target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram fa-2x" aria-hidden="true"></i> </OutboundLink> : null}
                                 {socials.youtube ? <OutboundLink href={socials.youtube} target="_blank" rel="noopener noreferrer"><i className="fa fa-youtube-play fa-2x" aria-hidden="true"></i> </OutboundLink> : null}
-                                {socials.vimeo ? <OutboundLink href={socials.vimeo} target="_blank" rel="noopener noreferrer"><i className="fa fa-vimeo-square fa-2x" aria-hidden="true"></i> </OutboundLink> : null}
                                 {socials.spotify ? <OutboundLink href={socials.spotify} target="_blank" rel="noopener noreferrer"><i className="fa fa-spotify fa-2x" aria-hidden="true"></i> </OutboundLink> : null}
                             </div>
                         </div>

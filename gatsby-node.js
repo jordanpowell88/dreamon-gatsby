@@ -46,7 +46,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               twitter
               instagram
               youtube
-              vimeo
               spotify
               date
               author
