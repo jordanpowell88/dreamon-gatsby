@@ -421,6 +421,27 @@ input:focus {
   position: relative;
 }
 
+.page-title-area-jodi {
+  background: url("../images/volunteers/jodi-mears-live.jpg") no-repeat
+    scroll center top / cover;
+  padding: 600px 0 100px;
+  position: relative;
+}
+
+.page-title-area-dale-ann {
+  background: url("../images/volunteers/dale-ann-ross-live.jpg") no-repeat
+    scroll center top / cover;
+  padding: 600px 0 100px;
+  position: relative;
+}
+
+.page-title-area-colin {
+  background: url("../images/volunteers/colin-ross-live.jpg") no-repeat
+    scroll center top / cover;
+  padding: 600px 0 100px;
+  position: relative;
+}
+
 .page-title-area-ty {
   background: url("../images/volunteers/tyler-watson-live.jpg") no-repeat scroll
     center top / cover;

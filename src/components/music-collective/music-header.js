@@ -18,6 +18,15 @@ function getMusicianPageTitleArea(name) {
 
         case 'Blake Reynolds':
             return 'page-title-area-blake parralax';
+
+        case 'Jodi Mears':
+            return 'page-title-area-jodi parralax';
+
+        case 'Dale Ann Ross':
+            return 'page-title-area-dale-ann parralax';
+
+        case 'Colin Ross':
+            return 'page-title-area-colin parralax';
     
         default:
             return 'page-title-area parralax';
