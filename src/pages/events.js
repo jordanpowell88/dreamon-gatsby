@@ -1,6 +1,7 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import EventPreview from '../components/events/event-preview';
 
@@ -19,7 +20,7 @@ const EventsPage = ({
 
   return (
     <Layout>
-      <SEO title={title} />
+      <Seo title={title} />
       <PageHeader title={title} />
 
       <div className="blog-area section-padding">

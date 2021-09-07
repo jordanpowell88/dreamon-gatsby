@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
@@ -31,7 +31,7 @@ const MissionsPage = () => {
   const title = 'Missions';
   return (
     <Layout>
-      <SEO title={title} />
+      <Seo title={title} />
       <PageHeader title={title} />
 
       <div className="blog-area section-padding">

@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from "../components/layout"
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import TeamPreview from '../components/team/team-preview';
 import { graphql } from "gatsby";
 
@@ -16,7 +16,7 @@ const Team = ({
     )
   return (
     <Layout>
-      <SEO title="Team" />
+      <Seo title="Team" />
       {TeamMembers}
     </Layout>
   )
