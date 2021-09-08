@@ -30,6 +30,7 @@ const EventsPage = ({
                     <div className="col-sm-8 col-sm-offset-2">
                         <h1 className="text-center">Upcoming Events</h1>
                         {UpcomingEvents}
+                        { UpcomingEvents.length === 0 && <p className="text-center">No Upcoming Events</p> }
                     </div>
                 </div>
             </div>

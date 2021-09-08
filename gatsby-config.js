@@ -71,7 +71,8 @@ module.exports = {
         trackingId: 'UA-89172717-1',
         head: true,
       }
-    }
+    },
+    'gatsby-plugin-image'
   ],
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
