@@ -1,6 +1,6 @@
 ---
 path: "/speakers/rob-kennedy"
-order: 4
+order: 5
 name: "Rob Kennedy"
 title: "Speaker Collective Speaker"
 photo: "/images/volunteers/rob-kennedy.jpg"

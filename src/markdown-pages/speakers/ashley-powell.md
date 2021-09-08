@@ -1,6 +1,6 @@
 ---
 path: "/speakers/ashley-powell"
-order: 2
+order: 3
 name: "Ashley Powell"
 title: "Speaker Collective Speaker"
 photo: "/images/volunteers/ashley-powell.jpg"

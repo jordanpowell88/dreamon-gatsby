@@ -1,6 +1,6 @@
 ---
 path: "/speakers/ty-watson"
-order: 1
+order: 2
 name: "Ty Watson"
 title: "Speaker Collective Speaker"
 photo: "/images/volunteers/tyler-watson.jpg"
