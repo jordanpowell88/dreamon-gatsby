@@ -6,7 +6,7 @@ import Buckets from '../components/buckets';
 import Contact from '../components/contact';
 import Layout from "../components/layout";
 import PlayVideo from "../components/play-video";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import Team from '../components/team/team';
 import TeamPreview from "../components/team/team-preview";
 
@@ -28,7 +28,7 @@ const IndexPage = ({
 
     return (
     <Layout>
-        <SEO title="Home" />
+        <Seo title="Home" />
         <LoadableSlider />
         <Buckets />
         <About />

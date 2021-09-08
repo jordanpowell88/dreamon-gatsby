@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import { graphql } from 'gatsby';
 import SpeakerHeader from '../components/speaker-collective/speaker-header';
 import SpeakerBooks from '../components/speaker-collective/speaker-books';
@@ -18,7 +18,7 @@ const SpeakerMember = ({
     .filter(book => book.frontmatter.author === frontmatter.name)
   return (
     <Layout>
-      <SEO title={frontmatter.name} />
+      <Seo title={frontmatter.name} />
       <SpeakerHeader title={frontmatter.name} socials={socials} />
       <div className="blog-area section-padding">
         <div className="container">

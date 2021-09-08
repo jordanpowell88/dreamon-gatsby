@@ -1,6 +1,7 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import EventPreview from '../components/events/event-preview';
 
@@ -19,7 +20,7 @@ const EventsPage = ({
 
   return (
     <Layout>
-      <SEO title={title} />
+      <Seo title={title} />
       <PageHeader title={title} />
 
       <div className="blog-area section-padding">
@@ -29,6 +30,7 @@ const EventsPage = ({
                     <div className="col-sm-8 col-sm-offset-2">
                         <h1 className="text-center">Upcoming Events</h1>
                         {UpcomingEvents}
+                        { UpcomingEvents.length === 0 && <p className="text-center">No Upcoming Events</p> }
                     </div>
                 </div>
             </div>

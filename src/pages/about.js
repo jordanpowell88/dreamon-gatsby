@@ -1,7 +1,8 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import About from '../components/about';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import TeamPreview from '../components/team/team-preview';
 import Team from '../components/team/team';
@@ -19,7 +20,7 @@ const AboutPage = ({
     )
   return (
     <Layout>
-      <SEO title={title} />
+      <Seo title={title} />
       <PageHeader title={title} />
       <About />
       <Team TeamMembers={TeamMembers} />

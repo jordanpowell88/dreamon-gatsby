@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import MusicHeader from '../components/music-collective/music-header';
 import MusicCollectiveVideos from '../components/music-collective/music-collective-videos';
 import MusicCollectiveEvents from '../components/music-collective/music-collective-events';
@@ -22,7 +22,7 @@ const MusicMember = ({
     .filter(event => new Date(event.frontmatter.date) >= new Date())
   return (
     <Layout>
-      <SEO title={frontmatter.name} />
+      <Seo title={frontmatter.name} />
       <MusicHeader title={frontmatter.name} socials={socials} />
       <div className="blog-area section-padding">
         <div className="container">

@@ -1,6 +1,6 @@
 ---
 path: "/speakers/hanna-swartz"
-order: 3
+order: 4
 name: "Hanna Swartz"
 title: "Speaker Collective Speaker"
 photo: "/images/volunteers/hanna-swartz.jpg"

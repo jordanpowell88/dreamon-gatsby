@@ -1,6 +1,7 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import EventPreview from '../components/events/event-preview';
 
@@ -12,7 +13,7 @@ const EventTemplate = ({
   const breadcrumbs = [{name: "Events", link: '/events'}]
   return (
     <Layout>
-      <SEO title={frontmatter.title} />
+      <Seo title={frontmatter.title} />
       <PageHeader title={frontmatter.title} breadcrumbs={breadcrumbs} />
       <div className="blog-area section-padding">
         <div className="container">
