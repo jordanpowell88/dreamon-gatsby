@@ -1,4 +1,3 @@
-
 name: Gatsby Publish
 on:
   push:
@@ -44,5 +43,5 @@ jobs:
           host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: "public_html"
-          remoteDir: "www"
+          localDir: "public"
+          remoteDir: "public_html"
