@@ -1,5 +1,17 @@
 {
     "about": {
-        "pageTitle": "About Dream On"
+        "pageTitle": "About Dream On",
+        "mission": "Our Mission",
+        "missionDescription": "We find our purpose in Him. So we dream on purpose. We are a group of young adults that have a calling to spark dreams and purposes back into the hearts of the world. Dreaming requires faith, and we believe this is something missing today.",
+        "history": "Our History",
+        "historyDescription": "Dream on began as an idea over breakfast at a local dinner in 2016. It since has turned into a global movement empowering people of all ages to pursue their dreams.",
+        "coreValues": "Our Core Values",
+        "coreValueListItems": "<ul><li>Excellence in every way</li><li>Integrity in everything</li><li>Jesus at the center</li><li>Unity Within &amp; Unity Without</li></ul>",
+        "join": "Join the Team",
+        "joinDescription": "We are looking for people just like you to join the 'Dream Team!'",
+        "give": "Give a Dream",
+        "giveDescription": "We are partnering with people like you to give children all across the globe their dreams.",
+        "partner": "Become a Partner",
+        "partnerDescription": "We aren't able to do anything without the support of people like you."
     }
 }

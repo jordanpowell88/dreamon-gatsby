@@ -9,7 +9,19 @@ const query = graphql`
           name
           childrenTranslationsJson {
             about {
-              pageTitle
+              pageTitle,
+              mission,
+              missionDescription,
+              history,
+              historyDescription,
+              coreValues,
+              coreValueListItems,
+              join,
+              joinDescription,
+              give,
+              giveDescription,
+              partner,
+              partnerDescription
             }
           }
         }

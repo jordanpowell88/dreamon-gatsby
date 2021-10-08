@@ -12,7 +12,7 @@ const AboutPage = ({
     allMarkdownRemark: { edges }
   }
 }) => {
-  const { about: { pageTitle } } = useAboutTranslation();
+  const { about } = useAboutTranslation();
 
   const TeamMembers = edges
     .filter(edge => edge.node.frontmatter.category === 'Team')
@@ -21,9 +21,9 @@ const AboutPage = ({
     )
   return (
     <>
-      <Seo title={pageTitle} />
-      <PageHeader title={pageTitle} />
-      <About />
+      <Seo title={about.pageTitle} />
+      <PageHeader title={about.pageTitle} />
+      <About about={about} />
       <Team TeamMembers={TeamMembers} />
     </>
   )

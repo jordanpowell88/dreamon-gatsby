@@ -1,5 +1,17 @@
 {
     "about": {
-        "pageTitle": "Acerca de Dream On"
+        "pageTitle": "Acerca de Dream On",
+        "mission": "Nuestra misión",
+        "missionDescription": "Encontramos nuestro propósito en Él. Entonces soñamos a propósito. Somos un grupo de adultos jóvenes que tenemos el llamado de despertar sueños y propósitos en los corazones del mundo. Soñar requiere fe, y creemos que esto es algo que falta hoy.",
+        "history": "Nuestra historia",
+        "historyDescription": "Dream on comenzó como una idea durante el desayuno en una cena local en 2016. Desde entonces se ha convertido en un movimiento global que empodera a personas de todas las edades para perseguir sus sueños.",
+        "coreValues": "Nuestros valores mas importantes",
+        "coreValueListItems": "<ul><li>Excelencia en todos los sentidos</li><li>Integridad en todo</li><li>Jesús en el centro</li><li>Unidad interior y unidad exterior</li></ul>",
+        "join": "Únete al equipo",
+        "joinDescription": "Buscamos personas como usted para unirse al 'Dream Team'.",
+        "give": "Dar un sueño",
+        "giveDescription": "Nos asociamos con personas como usted para darles a los niños de todo el mundo sus sueños.",
+        "partner": "Conviértete en un compañero",
+        "partnerDescription": "No podemos hacer nada sin el apoyo de personas como tú."
     }
 }
