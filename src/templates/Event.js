@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
 import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import EventPreview from '../components/events/event-preview';
@@ -12,7 +11,7 @@ const EventTemplate = ({
   const { frontmatter, html } = markdownRemark;
   const breadcrumbs = [{name: "Events", link: '/events'}]
   return (
-    <Layout>
+    <>
       <Seo title={frontmatter.title} />
       <PageHeader title={frontmatter.title} breadcrumbs={breadcrumbs} />
       <div className="blog-area section-padding">
@@ -24,7 +23,7 @@ const EventTemplate = ({
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
 export default EventTemplate;

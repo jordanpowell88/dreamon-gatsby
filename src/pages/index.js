@@ -4,7 +4,6 @@ import Loadable from 'react-loadable';
 import About from '../components/about';
 import Buckets from '../components/buckets';
 import Contact from '../components/contact';
-import Layout from "../components/layout";
 import PlayVideo from "../components/play-video";
 import Seo from "../components/seo";
 import Team from '../components/team/team';
@@ -27,7 +26,7 @@ const IndexPage = ({
       )
 
     return (
-    <Layout>
+    <>
         <Seo title="Home" />
         <LoadableSlider />
         <Buckets />
@@ -35,7 +34,7 @@ const IndexPage = ({
         <PlayVideo />
         <Team TeamMembers={TeamMembers} />
         <Contact />
-    </Layout>
+    </>
     )
 }
 

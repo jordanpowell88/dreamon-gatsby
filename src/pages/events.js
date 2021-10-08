@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
 import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import EventPreview from '../components/events/event-preview';
@@ -19,7 +18,7 @@ const EventsPage = ({
     );
 
   return (
-    <Layout>
+    <>
       <Seo title={title} />
       <PageHeader title={title} />
 
@@ -36,7 +35,7 @@ const EventsPage = ({
             </div>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
 export default EventsPage;

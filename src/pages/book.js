@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../components/layout';
 import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import HubspotForm from 'react-hubspot-form';
@@ -8,7 +7,7 @@ import Testimonials from '../components/testimonials';
 const BookPage = () => {
   const title = "Book Dream On"
   return (
-    <Layout>
+    <>
       <Seo title={title} />
       <PageHeader title={title} />
       <section className="contact-area section-padding" id="contact">
@@ -39,7 +38,7 @@ const BookPage = () => {
               </div>
           </div>
       </section>
-    </Layout>
+    </>
   )
 }
 export default BookPage;

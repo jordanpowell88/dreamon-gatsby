@@ -1,11 +1,10 @@
 import React from 'react';
-import Layout from '../components/layout';
 import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import HubspotForm from 'react-hubspot-form';
 
 const JoinPage = () => (
-  <Layout>
+  <>
     <Seo title="Join" />
     <PageHeader title="Join" />
     <section className="contact-area section-padding" id="contact">
@@ -31,6 +30,6 @@ const JoinPage = () => (
             </div>
         </div>
     </section>
-  </Layout>
+  </>
 )
 export default JoinPage;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
 import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import MusicPreview from '../components/music-collective/music-preview';
@@ -17,7 +16,7 @@ const MusicPage = ({
       <MusicPreview key={edge.node.id} data={edge.node.frontmatter} />
     )
   return (
-    <Layout>
+    <>
       <Seo title={title} />
       <PageHeader title={title} />
 
@@ -33,8 +32,8 @@ const MusicPage = ({
                 </div>
             </div>
         </div>
-    </div>
-    </Layout>
+      </div>
+    </>
   )
 }
 export default MusicPage;

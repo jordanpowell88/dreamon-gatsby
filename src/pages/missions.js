@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../components/layout';
 import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
@@ -30,7 +29,7 @@ const TripPreview = () => (
 const MissionsPage = () => {
   const title = 'Missions';
   return (
-    <Layout>
+    <>
       <Seo title={title} />
       <PageHeader title={title} />
 
@@ -49,7 +48,7 @@ const MissionsPage = () => {
             </div>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
 export default MissionsPage;

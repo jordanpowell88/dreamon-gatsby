@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from "../components/layout"
 import Seo from "../components/seo";
 import TeamPreview from '../components/team/team-preview';
 import { graphql } from "gatsby";
@@ -15,10 +14,10 @@ const Team = ({
       <TeamPreview key={edge.node.id} data={edge.node.frontmatter} />
     )
   return (
-    <Layout>
+    <>
       <Seo title="Team" />
       {TeamMembers}
-    </Layout>
+    </>
   )
 }
 

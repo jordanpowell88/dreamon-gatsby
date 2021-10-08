@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../components/layout';
 import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
@@ -8,7 +7,7 @@ const Guatemala = () => {
   const title = "Guatemala"
   const breadcrumbs = [{name: "Missions", link: '/missions'}]
   return (
-    <Layout>
+    <>
       <Seo title={title} />
       <PageHeader title={title} breadcrumbs={breadcrumbs} />
       <section className="single-causes-area section-padding">
@@ -25,7 +24,7 @@ const Guatemala = () => {
                 </div>
             </div>
       </section>
-    </Layout>
+    </>
   )
 }
 
