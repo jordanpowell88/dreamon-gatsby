@@ -1,3 +1,5 @@
 {
-    "aboutPageTitle": "Acerca de Dream On"
+    "about": {
+        "pageTitle": "Acerca de Dream On"
+    }
 }

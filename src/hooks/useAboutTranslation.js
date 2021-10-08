@@ -2,13 +2,15 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { useLocale } from './useLocale';
 
 const query = graphql`
-  query useTranslations {
+  query useAboutTranslations {
     allFile(filter: {relativeDirectory: {eq: "translations"}}) {
       edges {
         node {
           name
           childrenTranslationsJson {
-            aboutPageTitle
+            about {
+              pageTitle
+            }
           }
         }
       }
@@ -17,7 +19,7 @@ const query = graphql`
 `;
 
 // This hook simplifies query response for current language.
-const useTranslation = () => {
+const useAboutTranslation = () => {
   const { locale } = useLocale();
   const { allFile } = useStaticQuery(query);
 
@@ -37,4 +39,4 @@ const useTranslation = () => {
   return queryList.filter(lang => lang.name === locale)[0];
 };
 
-export default useTranslation;
+export default useAboutTranslation;

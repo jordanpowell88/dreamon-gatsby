@@ -5,14 +5,15 @@ import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import TeamPreview from '../components/team/team-preview';
 import Team from '../components/team/team';
-import useTranslation from '../hooks/useTranslation';
+import { useAboutTranslation } from '../hooks';
 
 const AboutPage = ({
   data: {
     allMarkdownRemark: { edges }
   }
 }) => {
-  const { aboutPageTitle } = useTranslation();
+  const { about: { pageTitle } } = useAboutTranslation();
+
   const TeamMembers = edges
     .filter(edge => edge.node.frontmatter.category === 'Team')
     .map(edge =>
@@ -20,8 +21,8 @@ const AboutPage = ({
     )
   return (
     <>
-      <Seo title={aboutPageTitle} />
-      <PageHeader title={aboutPageTitle} />
+      <Seo title={pageTitle} />
+      <PageHeader title={pageTitle} />
       <About />
       <Team TeamMembers={TeamMembers} />
     </>
