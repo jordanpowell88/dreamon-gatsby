@@ -2,7 +2,7 @@ import React from 'react';
 import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
-import { useMissionsTranslation } from '../hooks';
+import { useTranslation } from '../hooks';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
@@ -56,22 +56,22 @@ const TripPreview = ({ translations: trips }) => {
 } 
 
 const MissionsPage = () => {
-  const { missions: { pageTitle, upcomingTripsTitle, upcomingTripsDescription, trips } } = useMissionsTranslation();
+  const { missions: translations } = useTranslation();
   return (
     <>
-      <Seo title={pageTitle} />
-      <PageHeader title={pageTitle} />
+      <Seo title={translations.pageTitle} />
+      <PageHeader title={translations.pageTitle} />
 
       <div className="blog-area section-padding">
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
                     <div className="col-sm-8 col-sm-offset-2">
-                        <h1 className="text-center">{upcomingTripsTitle}</h1>
+                        <h1 className="text-center">{translations.upcomingTripsTitle}</h1>
                         <hr />
-                        <p>{upcomingTripsDescription}</p>
+                        <p>{translations.upcomingTripsDescription}</p>
                     
-                        <TripPreview translations={trips} />
+                        <TripPreview translations={translations.trips} />
                     </div>
                 </div>
             </div>

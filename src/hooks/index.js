@@ -1,10 +1,8 @@
 import { LocaleProvider, useLocale } from './useLocale';
-import useAboutTranslation from './useAboutTranslation';
-import useMissionsTranslation from './useMissionsTranslation';
+import useTranslation from './useTranslation';
 
 export {
     LocaleProvider,
     useLocale,
-    useAboutTranslation,
-    useMissionsTranslation
+    useTranslation
 }

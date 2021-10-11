@@ -8,7 +8,7 @@ import PlayVideo from "../components/play-video";
 import Seo from "../components/seo";
 import Team from '../components/team/team';
 import TeamPreview from "../components/team/team-preview";
-import { useAboutTranslation } from '../hooks';
+import { useTranslation } from '../hooks';
 
 const LoadableSlider = Loadable({
   loader: () => import('../components/slider'),
@@ -26,17 +26,17 @@ const IndexPage = ({
         <TeamPreview key={edge.node.id} data={edge.node.frontmatter} />
       )
 
-      const { about } = useAboutTranslation();
+      const translations = useTranslation();
 
     return (
     <>
         <Seo title="Home" />
         <LoadableSlider />
         <Buckets />
-        <About translations={about} />
+        <About translations={translations.about} />
         <PlayVideo />
-        <Team TeamMembers={TeamMembers} title={about.team.title} />
-        <Contact />
+        <Team TeamMembers={TeamMembers} title={translations.about.team.title} />
+        <Contact title={translations.contact.contactUs} loading={translations.contact.loading} />
     </>
     )
 }

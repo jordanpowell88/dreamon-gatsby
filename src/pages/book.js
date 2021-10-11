@@ -3,19 +3,20 @@ import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import HubspotForm from 'react-hubspot-form';
 import Testimonials from '../components/testimonials';
+import { useTranslation } from '../hooks';
 
 const BookPage = () => {
-  const title = "Book Dream On"
+  const { book: translations } = useTranslation();
   return (
     <>
-      <Seo title={title} />
-      <PageHeader title={title} />
+      <Seo title={translations.pageTitle} />
+      <PageHeader title={translations.pageTitle} />
       <section className="contact-area section-padding" id="contact">
           <div className="container">
               <div className="row">
                   <div className="col-sm-8 col-sm-offset-2">
                       <div className="title text-center">
-                          <h2>{title}</h2>
+                          <h2>{translations.pageTitle}</h2>
                           <div className="separate"><span className="separate-icon"></span></div>
                       </div>
                       <div className="embed-responsive embed-responsive-16by9">
@@ -33,7 +34,7 @@ const BookPage = () => {
                     />
 
                     <hr />
-                    <Testimonials />
+                    <Testimonials title={translations.testimonialVideosTitle} />
                   </div>
               </div>
           </div>

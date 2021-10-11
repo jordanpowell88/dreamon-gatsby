@@ -1,13 +1,18 @@
 import React from "react"
+import PageHeader from "../components/page-header"
 
 import Seo from "../components/seo"
+import useTranslation from "../hooks/useTranslation"
 
-const NotFoundPage = () => (
+const NotFoundPage = () => {
+  const { fourZeroFour: translations } = useTranslation();
+  return (
   <>
-    <Seo title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <Seo title={translations.pageTitle} />
+    <PageHeader title={translations.pageTitle} />
+    <h1>{translations.notFoundTitle}</h1>
+    <p>{translations.notFoundDescription}</p>
   </>
-)
-
+  )
+}
 export default NotFoundPage

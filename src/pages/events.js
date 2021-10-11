@@ -3,13 +3,14 @@ import { graphql } from 'gatsby';
 import Seo from '../components/seo';
 import PageHeader from '../components/page-header';
 import EventPreview from '../components/events/event-preview';
+import useTranslation from '../hooks/useTranslation';
 
 const EventsPage = ({
   data: {
     allMarkdownRemark: { edges }
   }
 }) => {
-  const title="Upcoming Events"
+  const { events: translations } = useTranslation();
   const UpcomingEvents = edges
     .filter(edge => edge.node.frontmatter.category === 'Events' &&
       new Date(edge.node.frontmatter.date) >= new Date())
@@ -19,17 +20,17 @@ const EventsPage = ({
 
   return (
     <>
-      <Seo title={title} />
-      <PageHeader title={title} />
+      <Seo title={translations.pageTitle} />
+      <PageHeader title={translations.pageTitle} />
 
       <div className="blog-area section-padding">
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
                     <div className="col-sm-8 col-sm-offset-2">
-                        <h1 className="text-center">Upcoming Events</h1>
+                        <h1 className="text-center">{translations.pageTitle}</h1>
                         {UpcomingEvents}
-                        { UpcomingEvents.length === 0 && <p className="text-center">No Upcoming Events</p> }
+                        { UpcomingEvents.length === 0 && <p className="text-center">{translations.noUpcomingEvents}</p> }
                     </div>
                 </div>
             </div>

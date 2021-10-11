@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
+import useTranslation from '../hooks/useTranslation';
 
 const Footer = () => {
+    const { footer: translations } = useTranslation();
     const date = new Date().getFullYear()
     return (
     <>
@@ -12,7 +14,7 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-sm-12 text-center">
                             <div className="copy-right">
-                                <p>Copyright &copy; {date} <Link to="/">| Dream On: Global |</Link> all rights reserved.</p>
+                                <p>{translations.copyright} &copy; {date} <Link to="/">| Dream On: Global |</Link> {translations.allRightsReserved}</p>
                             </div>
                         </div>
                     </div>

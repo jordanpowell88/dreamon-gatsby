@@ -1,19 +1,23 @@
 import React from 'react';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { useTranslation } from '../hooks';
 
-const Buckets = () => (
-  <section className="donate-wraper">
-    <div className="single-donate-wraper donate-wraper-bg-one">
-        <h2>get details about joining our next trip</h2>
-        <OutboundLink href="https://dreamon.gomethod.app/!/#/20234/honduras-2021" target="_blank" rel="noopener noreferrer" className="tem-btn nav-link move-eff"><span>join</span></OutboundLink>
-    </div>
-    <div className="single-donate-wraper donate-wraper-bg-two">
-        
-    </div>
-    <div className="single-donate-wraper donate-wraper-bg-three">
-        <h2>we need your help changing the world</h2>
-        <OutboundLink href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCJ6SAWVF5U5Q" target="_blank" rel="noopener noreferrer" className="tem-btn nav-link move-eff"><span>donate</span></OutboundLink>
-    </div>
-  </section>
-)
+const Buckets = () => {
+  const { home: { bucket: translations } } = useTranslation();
+  return (
+    <section className="donate-wraper">
+      <div className="single-donate-wraper donate-wraper-bg-one">
+          <h2>{translations.one.title}</h2>
+          <OutboundLink href={translations.one.buttonLink} target="_blank" rel="noopener noreferrer" className="tem-btn nav-link move-eff"><span>{translations.one.button}</span></OutboundLink>
+      </div>
+      <div className="single-donate-wraper donate-wraper-bg-two">
+          
+      </div>
+      <div className="single-donate-wraper donate-wraper-bg-three">
+          <h2>{translations.three.title}</h2>
+          <OutboundLink href={translations.three.buttonLink} target="_blank" rel="noopener noreferrer" className="tem-btn nav-link move-eff"><span>{translations.three.button}</span></OutboundLink>
+      </div>
+    </section>
+  )
+}
 export default Buckets;
