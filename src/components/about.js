@@ -3,7 +3,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const About = ({ about: { mission, missionDescription, history, historyDescription, coreValues, coreValueListItems, join, joinDescription, give, giveDescription, partner, partnerDescription, buttons, links } }) => {
+const About = ({ translations: { mission, missionDescription, history, historyDescription, coreValues, coreValueListItems, join, joinDescription, give, giveDescription, partner, partnerDescription, buttons, links } }) => {
     const data = useStaticQuery(graphql`
     query {
       aboutImage: file(relativePath: { eq: "about/dream-team.jpg" }) {

@@ -23,8 +23,8 @@ const AboutPage = ({
     <>
       <Seo title={about.pageTitle} />
       <PageHeader title={about.pageTitle} />
-      <About about={about} />
-      <Team TeamMembers={TeamMembers} />
+      <About translations={about} />
+      <Team TeamMembers={TeamMembers} title={about.team.title} />
     </>
   )
 }

@@ -20,6 +20,26 @@
         "links": {
             "join": "/join",
             "donate": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCJ6SAWVF5U5Q"
+        },
+        "team": {
+            "title": "The Dream Team"
+        }
+    },
+    "missions": {
+        "pageTitle": "Missions",
+        "upcomingTripsTitle": "Upcoming Trips",
+        "upcomingTripsDescription": "Our vision is to re-spark the Body of Christ to dream again, right in their very geographical location. We know that every participant will return home with their own dreams to change the world, but we also believe in the importance of the Central American people reaching their own dreams.",
+        "trips": {
+            "honduras": {
+                "country": "Honduras",
+                "date": "November 2021",
+                "link": "https://dreamon.gomethod.app/!/#/20234/honduras-2021"
+            },
+            "brazil": {
+                "country": "Brazil",
+                "date": "March 2022",
+                "link": "#"
+            }
         }
     }
 }

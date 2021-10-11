@@ -20,6 +20,26 @@
         "links": {
             "join": "/es/join",
             "donate": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCJ6SAWVF5U5Q"
+        },
+        "team": {
+            "title": "El equipo de ensueño"
+        }
+    },
+    "missions": {
+        "pageTitle": "Misiones",
+        "upcomingTripsTitle": "Próximos viajes",
+        "upcomingTripsDescription": "Nuestra visión es volver a encender el Cuerpo de Cristo para volver a soñar, justo en su misma ubicación geográfica. Sabemos que cada participante volverá a casa con sus propios sueños de cambiar el mundo, pero también creemos en la importancia de que el pueblo centroamericano alcance sus propios sueños.",
+        "trips": {
+            "honduras": {
+                "country": "Honduras",
+                "date": "Noviembre de 2021",
+                "link": "https://dreamon.gomethod.app/!/#/20234/honduras-2021"
+            },
+            "brazil": {
+                "country": "Brasil",
+                "date": "Marzo 2022",
+                "link": "#"
+            }
         }
     }
 }

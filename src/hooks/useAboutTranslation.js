@@ -29,6 +29,9 @@ const query = graphql`
               links {
                 join,
                 donate
+              },
+              team {
+                title
               }
             }
           }
