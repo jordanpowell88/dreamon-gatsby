@@ -12,6 +12,14 @@
         "give": "Give a Dream",
         "giveDescription": "We are partnering with people like you to give children all across the globe their dreams.",
         "partner": "Become a Partner",
-        "partnerDescription": "We aren't able to do anything without the support of people like you."
+        "partnerDescription": "We aren't able to do anything without the support of people like you.",
+        "buttons": {
+            "learnMoreButton": "Learn More",
+            "donateNowButton": "Donate Now"
+        },
+        "links": {
+            "join": "/join",
+            "donate": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCJ6SAWVF5U5Q"
+        }
     }
 }

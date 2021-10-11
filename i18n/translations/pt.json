@@ -12,6 +12,14 @@
         "give": "Dê um Sonho",
         "giveDescription": "Estamos fazendo parceria com pessoas como você para dar às crianças de todo o mundo os seus sonhos.",
         "partner": "Torne-se um parceiro",
-        "partnerDescription": "Não podemos fazer nada sem o apoio de pessoas como você."
+        "partnerDescription": "Não podemos fazer nada sem o apoio de pessoas como você.",
+        "buttons": {
+            "learnMoreButton": "Saber mais",
+            "donateNowButton": "DOE agora"
+        },
+        "links": {
+            "join": "/pt/join",
+            "donate": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCJ6SAWVF5U5Q"
+        }
     }
 }

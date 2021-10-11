@@ -21,7 +21,15 @@ const query = graphql`
               give,
               giveDescription,
               partner,
-              partnerDescription
+              partnerDescription,
+              buttons {
+                learnMoreButton,
+                donateNowButton
+              },
+              links {
+                join,
+                donate
+              }
             }
           }
         }
