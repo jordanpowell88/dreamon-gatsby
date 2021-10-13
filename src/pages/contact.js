@@ -1,18 +1,18 @@
 import React from 'react';
 import Contact from '../components/contact';
-import Layout from '../components/layout';
 import PageHeader from '../components/page-header';
 import Seo from '../components/seo';
+import { useTranslation } from '../hooks';
 
 const ContactPage = () => {
-  const title = 'Contact'
+  const { contact: translations } = useTranslation();
   
   return (
-    <Layout>
-      <Seo title={title} />
-      <PageHeader title={title} />
-        <Contact />
-    </Layout>
+    <>
+      <Seo title={translations.pageTitle} />
+      <PageHeader title={translations.pageTitle} />
+      <Contact title={translations.contactUs} loading={translations.loading} />
+    </>
   )
 }
 

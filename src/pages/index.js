@@ -4,11 +4,11 @@ import Loadable from 'react-loadable';
 import About from '../components/about';
 import Buckets from '../components/buckets';
 import Contact from '../components/contact';
-import Layout from "../components/layout";
 import PlayVideo from "../components/play-video";
 import Seo from "../components/seo";
 import Team from '../components/team/team';
 import TeamPreview from "../components/team/team-preview";
+import { useTranslation } from '../hooks';
 
 const LoadableSlider = Loadable({
   loader: () => import('../components/slider'),
@@ -26,16 +26,18 @@ const IndexPage = ({
         <TeamPreview key={edge.node.id} data={edge.node.frontmatter} />
       )
 
+      const translations = useTranslation();
+
     return (
-    <Layout>
+    <>
         <Seo title="Home" />
         <LoadableSlider />
         <Buckets />
-        <About />
+        <About translations={translations.about} />
         <PlayVideo />
-        <Team TeamMembers={TeamMembers} />
-        <Contact />
-    </Layout>
+        <Team TeamMembers={TeamMembers} title={translations.about.team.title} />
+        <Contact title={translations.contact.contactUs} loading={translations.contact.loading} />
+    </>
     )
 }
 

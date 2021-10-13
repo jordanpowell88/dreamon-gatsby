@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../components/layout';
 import Seo from '../components/seo';
 import { graphql } from 'gatsby';
 import SpeakerHeader from '../components/speaker-collective/speaker-header';
@@ -17,7 +16,7 @@ const SpeakerMember = ({
   const books = data.allMarkdownRemark.nodes
     .filter(book => book.frontmatter.author === frontmatter.name)
   return (
-    <Layout>
+    <>
       <Seo title={frontmatter.name} />
       <SpeakerHeader title={frontmatter.name} socials={socials} />
       <div className="blog-area section-padding">
@@ -28,7 +27,7 @@ const SpeakerMember = ({
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
 export default SpeakerMember;

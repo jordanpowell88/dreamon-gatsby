@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { useTranslation } from '../hooks';
 
 function generateBreadcrumbs(breadcrumbs) {
   return breadcrumbs
@@ -15,11 +16,14 @@ function generateBreadcrumbs(breadcrumbs) {
 const Breadcrumbs = ({
   title,
   breadcrumbs
-}) => (
+}) => {
+  const { menu: translations } = useTranslation();
+  return (
   <ul className="breadcrumb">
-    <li><Link to="/">Home</Link></li>
+    <li><Link to={translations.homeLink}>{translations.home}</Link></li>
     {generateBreadcrumbs(breadcrumbs)}
     <li className="active">{title}</li>
   </ul>
-)
+  )
+}
 export default Breadcrumbs

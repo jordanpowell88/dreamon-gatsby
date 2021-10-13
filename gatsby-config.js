@@ -6,6 +6,12 @@ module.exports = {
     author: `@jordanpowell88`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: `${__dirname}/src/components/app.js`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -72,7 +78,15 @@ module.exports = {
         head: true,
       }
     },
-    'gatsby-plugin-image'
+    'gatsby-plugin-image',
+    'gatsby-transformer-json',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `i18n`,
+        path: `${__dirname}/i18n`,
+      },
+    },
   ],
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

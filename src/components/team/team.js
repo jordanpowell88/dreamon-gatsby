@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Team =({TeamMembers}) => {
+const Team =({TeamMembers, title }) => {
   return (
     <section className="volunteers-area section-padding" id="volunteers">
       <div className="container">
         <div className="row">
           <div className="col-sm-8 col-sm-offset-2">
             <div className="title text-center">
-              <h2>The dream team</h2>
+              <h2>{title}</h2>
               <div className="separate"><span className="separate-icon"></span></div>
             </div>
           </div>
