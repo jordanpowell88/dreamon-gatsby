@@ -583,7 +583,8 @@ nav {
   position: relative;
 }
 
-.main-menu ul li a {
+.main-menu ul li a,
+.main-menu ul li button {
   font-size: 16px;
   color: #fff !important;
   display: inline-block;
@@ -596,6 +597,10 @@ nav {
   -moz-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   position: relative;
+}
+
+.main-menu ul li button.nav-link.button-icon {
+  margin-top: -0.75rem;
 }
 
 .main-menu ul.nav li a:before {
